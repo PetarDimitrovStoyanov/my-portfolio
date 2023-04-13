@@ -1,10 +1,10 @@
 import React from 'react';
-import './Contact.css';
+import './Contact.scss';
 
 export default function Contact (){
     return (
-        <div>
+        <section>
             Contact
-        </div>
+        </section>
     );
 }
