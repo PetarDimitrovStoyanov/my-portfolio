@@ -1,0 +1,131 @@
+.contact {
+  padding: 50px 10%;
+  color: #ababab;
+  margin-top: 40px;
+
+  .container {
+    .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .contact-left {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        flex-basis: 35%;
+
+        .sub-title {
+          font-size: 60px;
+          font-weight: 600;
+          color: #ffffff;
+        }
+
+        .email, .phone {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          flex-wrap: wrap;
+          align-items: center;
+          color: #ffffff;
+        }
+
+        .email {
+          margin-top: 30px;
+
+          .link-icon {
+            margin: 0;
+            width: 24px;
+            height: 24px;
+            filter: brightness(0) saturate(100%) invert(97%) sepia(100%) saturate(0%) hue-rotate(265deg) brightness(104%) contrast(102%);
+          }
+        }
+
+        .phone {
+          a {
+            color: #ff004f;
+          }
+
+          .link-icon {
+            margin: 0;
+            width: 24px;
+            height: 24px;
+            filter: brightness(0) saturate(100%) invert(97%) sepia(100%) saturate(0%) hue-rotate(265deg) brightness(104%) contrast(102%);
+          }
+        }
+
+        .social-icons {
+          a {
+            text-decoration: none;
+            margin-right: 15px;
+            display: inline-block;
+
+            .link-icon {
+              width: 50px;
+              height: 50px;
+              filter: brightness(0) saturate(100%) invert(97%) sepia(100%) saturate(0%) hue-rotate(265deg) brightness(104%) contrast(102%);
+              transition: transform 0.5s;
+            }
+
+            .link-icon:hover {
+              transform: translateY(-5px);
+              filter: brightness(0) saturate(100%) invert(17%) sepia(59%) saturate(6257%) hue-rotate(333deg) brightness(95%) contrast(116%);
+            }
+          }
+        }
+
+        .btn {
+          border: 1px solid #ff004f;
+          width: fit-content;
+          border-radius: 5px;
+          padding: 10px 15px;
+          color: #ffffff;
+          margin-bottom: 40px;
+          background: transparent;
+          cursor: pointer;
+        }
+
+        .btn:hover {
+          background: #ff004f;
+          color: #ffffff;
+        }
+      }
+
+      .contact-right {
+        margin-left: 15px;
+        flex-basis: 60%;
+        .form {
+          width: 100%;
+
+          input, textarea {
+            border: 0;
+            width: 100%;
+            outline: none;
+            background: #26272B;
+            padding: 15px;
+            margin: 15px 0;
+            color: #ffffff;
+            font-size: 18px;
+            border-radius: 6px;
+          }
+
+          .btn {
+            border: 1px solid #ff004f;
+            width: fit-content;
+            border-radius: 5px;
+            padding: 10px 15px;
+            color: #ffffff;
+            margin-bottom: 40px;
+            background: transparent;
+            cursor: pointer;
+          }
+
+          .btn:hover {
+            background: #ff004f;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
