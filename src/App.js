@@ -2,8 +2,8 @@ import './App.css';
 import Header from "./components/header/Header";
 import Contact from "./components/contact/Contact";
 import About from "./components/about/About";
-import Certificates from "./components/Certificates/Certificates";
-import Projects from "./components/Projects/Projects";
+import Certificates from "./components/certificates/Certificates";
+import Projects from "./components/projects/Projects";
 
 function App() {
     return (
