@@ -3,8 +3,13 @@ import './Projects.scss';
 
 export default function Projects() {
     return (
-        <section>
+        <section className="projects">
+            <div className="container">
+                <h1 className="sub-title">My Projects</h1>
+                <div className="project-list">
 
+                </div>
+            </div>
         </section>
     );
 }
