@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@500&family=Six+Caps&display=swap');
 
+$small-display: 850px;
+$burger-menu-display: 1050px;
+
 .header {
   width: 100%;
   height: 100vh;
@@ -8,8 +11,18 @@
   background-position: right;
   background-repeat: no-repeat;
 
+  @media (max-width: $small-display) {
+    background-image: url("../../assets/final-serious - mobile.jpg");
+    background-size: 500px;
+  }
+
   .container {
     padding: 10px 10%;
+
+    @media (max-width: $small-display) {
+      height: 100%;
+      padding: 10px 4%;
+    }
 
     .navigation {
       display: flex;
@@ -37,32 +50,37 @@
           transition: color 0.8s ease;
         }
       }
-
-      .list-item {
-        display: inline-block;
-        list-style: none;
-        margin: 10px 20px;
-        position: relative;
-
-        .nav-link {
-          color: #ffffff;
-          text-decoration: none;
-          font-size: 18px;
+      .ul-container {
+        @media (max-width: $burger-menu-display) {
+          display: none;
         }
 
-        .nav-link::after {
-          content: '';
-          width: 0;
-          height: 3px;
-          background: #ff004f;
-          position: absolute;
-          left: 0;
-          bottom: -6px;
-          transition: 0.5s;
-        }
+        .list-item {
+          display: inline-block;
+          list-style: none;
+          margin: 10px 20px;
+          position: relative;
 
-        .nav-link:hover::after {
-          width: 100%;
+          .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+          }
+
+          .nav-link::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #ff004f;
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            transition: 0.5s;
+          }
+
+          .nav-link:hover::after {
+            width: 100%;
+          }
         }
       }
     }
@@ -71,8 +89,17 @@
       margin-top: 20%;
       font-size: 30px;
 
+      @media (max-width: $small-display) {
+        margin-top: 63vh;
+        font-size: 18px;
+      }
+
       h1 {
         font-size: 60px;
+
+        @media (max-width: $small-display) {
+          font-size: 30px;
+        }
       }
 
       .special {

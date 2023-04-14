@@ -12,14 +12,17 @@ export default function About() {
     }
 
     return (
-        <section className="about">
+        <section className="about" id="about-me">
             <div className="container">
                 <div className="row">
-                    <div className="about-col-1">
+                    <div className="about-col-1 desktop">
                         <img src={require('../../assets/official-hd.png')} alt="user"/>
                     </div>
                     <div className="about-col-2">
                         <h1 className="sub-title">About Me</h1>
+                        <div className="about-col-1 small">
+                            <img src={require('../../assets/official-hd.png')} alt="user"/>
+                        </div>
                         <p>I am passionate about coding and like to find solutions to complex problems.
                             With approx of 2 years of experience in the field, I have developed a skillset
                             in frontend and backend code development, and I am always eager to learn and take on new
