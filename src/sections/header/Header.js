@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.scss';
-import BurgerMenu from "../burger-menu/BurgerMenu";
+import BurgerMenu from "../../components/burger-menu/BurgerMenu";
 
 export default function Header() {
     return (

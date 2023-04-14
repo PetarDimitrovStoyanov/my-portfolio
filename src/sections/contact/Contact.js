@@ -8,6 +8,8 @@ import phone from "../../assets/icons/phone-solid.svg";
 
 import cv from '../../assets/cv/cv.pdf';
 
+import SubmitForm from "../../components/submit-form/SubmitForm";
+
 export default function Contact (){
 
     function downloadCV() {
@@ -16,7 +18,6 @@ export default function Contact (){
         link.download = 'cv.pdf';
         link.click();
     }
-
 
     return (
         <section className="contact" id="contact">
@@ -43,14 +44,7 @@ export default function Contact (){
                         <button onClick={downloadCV} className="btn">Download CV</button>
                     </div>
                     <div className="contact-right">
-                        <form action="" className="form">
-                            <input type="text" name="name" placeholder="Your name" required={true}/>
-                            <input type="email" name="email" placeholder="Your email" required={true}/>
-                            <textarea name="message" rows="8" placeholder="Your message" required={true}></textarea>
-                            <div className="submit-button-wrapper">
-                                <button type="submit" className="btn">Submit</button>
-                            </div>
-                        </form>
+                        <SubmitForm />
                     </div>
                 </div>
             </div>

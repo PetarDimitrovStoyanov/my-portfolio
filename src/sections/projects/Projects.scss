@@ -1,0 +1,30 @@
+@import '../../variables';
+
+.projects {
+  padding: 50px 10%;
+  color: $light-grey;
+  margin-top: 40px;
+
+  @media (max-width: $small-display) {
+    padding: 50px 4%;
+  }
+
+  .container {
+    .sub-title {
+      font-size: 60px;
+      font-weight: 600;
+      color: $white-color;
+
+      @media (max-width: $small-display) {
+        font-size: 50px;
+      }
+    }
+
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 40px;
+      margin-top: 50px;
+    }
+  }
+}
