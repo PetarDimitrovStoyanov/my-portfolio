@@ -1,8 +1,8 @@
-$small-display: 1050px;
+@import '../../variables';
 
 .certificates {
   padding: 30px 10%;
-  color: #ababab;
+  color: $light-grey;
 
   @media (max-width: $small-display) {
     padding: 30px 4%;
@@ -12,7 +12,7 @@ $small-display: 1050px;
     .sub-title {
       font-size: 60px;
       font-weight: 600;
-      color: #ffffff;
+      color: $white-color;
 
       @media (max-width: $small-display) {
         font-size: 50px;

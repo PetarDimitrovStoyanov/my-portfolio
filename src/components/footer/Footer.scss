@@ -1,4 +1,4 @@
-$small-display: 850px;
+@import '../../variables';
 
 .footer {
   margin-top: 40px;
@@ -7,7 +7,7 @@ $small-display: 850px;
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    background: #26272B;
+    background: $grey-color;
     font-weight: 300;
 
     @media (max-width: $small-display) {

@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@500&family=Six+Caps&display=swap');
 
-$small-display: 850px;
-$burger-menu-display: 1050px;
+@import '../../variables';
 
 .header {
   width: 100%;
@@ -41,12 +40,12 @@ $burger-menu-display: 1050px;
         }
 
         .portfolio:hover {
-          color: #ff004f;
+          color: $red-color;
         }
 
         .name {
           font-size: 18px;
-          color: #ff004f;
+          color: $red-color;
           transition: color 0.8s ease;
         }
       }
@@ -62,7 +61,7 @@ $burger-menu-display: 1050px;
           position: relative;
 
           .nav-link {
-            color: #ffffff;
+            color: $white-color;
             text-decoration: none;
             font-size: 18px;
           }
@@ -71,7 +70,7 @@ $burger-menu-display: 1050px;
             content: '';
             width: 0;
             height: 3px;
-            background: #ff004f;
+            background: $red-color;
             position: absolute;
             left: 0;
             bottom: -6px;
@@ -103,7 +102,7 @@ $burger-menu-display: 1050px;
       }
 
       .special {
-        color: #ff004f;
+        color: $red-color;
       }
 
       div {
@@ -112,7 +111,7 @@ $burger-menu-display: 1050px;
         gap: 5px;
 
         .special {
-          color: #ff004f;
+          color: $red-color;
         }
 
         .small {

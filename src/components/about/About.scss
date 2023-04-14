@@ -1,8 +1,8 @@
-$small-display: 1050px;
+@import '../../variables';
 
 .about {
   padding: 50px 10%;
-  color: #ababab;
+  color: $light-grey;
 
   @media (max-width: $small-display) {
     padding: 50px 4%;
@@ -41,7 +41,7 @@ $small-display: 1050px;
       .about-col-1 img {
         width: 100%;
         border-radius: 15px;
-        background: #26272B;
+        background: $grey-color;
       }
 
       .about-col-2 {
@@ -108,7 +108,7 @@ $small-display: 1050px;
             content: '';
             width: 0;
             height: 3px;
-            background: #ff004f;
+            background: $red-color;
             position: absolute;
             left: 0;
             bottom: -8px;
@@ -136,7 +136,7 @@ $small-display: 1050px;
 
           .tab-content-items::before {
             content: "\2022";
-            color: red;
+            color: $red-color;
             font-weight: bold;
             display: inline-block;
             width: 1em;
