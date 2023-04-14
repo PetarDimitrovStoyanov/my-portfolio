@@ -1,12 +1,22 @@
+$small-display: 1050px;
+
 .certificates {
   padding: 30px 10%;
   color: #ababab;
+
+  @media (max-width: $small-display) {
+    padding: 30px 4%;
+  }
 
   .container {
     .sub-title {
       font-size: 60px;
       font-weight: 600;
       color: #ffffff;
+
+      @media (max-width: $small-display) {
+        font-size: 50px;
+      }
     }
 
     .certificate-list {
@@ -26,6 +36,7 @@
         height: 39rem;
         padding: 2rem 0;
         position: relative;
+        z-index: 0!important;
       }
 
       .swiper-slide {
@@ -37,7 +48,6 @@
       @media (max-width: 500px) {
         .swiper_container {
           height: auto;
-          overflow: visible;
         }
         .swiper-slide {
           width: 28rem !important;

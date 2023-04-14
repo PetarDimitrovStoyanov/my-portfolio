@@ -1,9 +1,10 @@
 import React from 'react';
 import './Header.scss';
+import BurgerMenu from "../burger-menu/BurgerMenu";
 
 export default function Header() {
     return (
-        <section className="header">
+        <section className="header" id="home">
             <div className="container">
                 <nav className="navigation">
                     <div className="logo">
@@ -11,13 +12,24 @@ export default function Header() {
                         <span className="name">Petar Stoyanov</span>
                     </div>
 
-                    <ul>
-                        <li className="list-item"><a className="nav-link" href="">Home</a></li>
-                        <li className="list-item"><a className="nav-link" href="">About</a></li>
-                        <li className="list-item"><a className="nav-link" href="">Certificates</a></li>
-                        <li className="list-item"><a className="nav-link" href="">Portfolio</a></li>
-                        <li className="list-item"><a className="nav-link" href="">Contact</a></li>
+                    <ul className="ul-container">
+                        <li className="list-item">
+                            <a className="nav-link" href="#home">Home</a>
+                        </li>
+                        <li className="list-item">
+                            <a className="nav-link" href="#about-me">About Me</a>
+                        </li>
+                        <li className="list-item">
+                            <a className="nav-link" href="#my-certificates">My Certificates</a>
+                        </li>
+                        <li className="list-item">
+                            <a className="nav-link" href="#my-projects">Recent Projects</a>
+                        </li>
+                        <li className="list-item">
+                            <a className="nav-link" href="#contact">Contact</a>
+                        </li>
                     </ul>
+                    <BurgerMenu />
                 </nav>
                 <div className="header-text">
                     <div>

@@ -1,13 +1,23 @@
+$small-display: 1050px;
+
 .projects {
   padding: 50px 10%;
   color: #ababab;
   margin-top: 40px;
+
+  @media (max-width: $small-display) {
+    padding: 50px 4%;
+  }
 
   .container {
     .sub-title {
       font-size: 60px;
       font-weight: 600;
       color: #ffffff;
+
+      @media (max-width: $small-display) {
+        font-size: 50px;
+      }
     }
 
     .project-list {
@@ -20,6 +30,10 @@
         border-radius: 10px;
         position: relative;
         overflow: hidden;
+
+        @media (max-width: $small-display) {
+          min-height: 300px;
+        }
 
         .layer {
           width: 100%;

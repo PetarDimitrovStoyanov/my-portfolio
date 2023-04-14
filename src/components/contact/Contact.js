@@ -19,7 +19,7 @@ export default function Contact (){
 
 
     return (
-        <section className="contact">
+        <section className="contact" id="contact">
             <div className="container">
                 <div className="row">
                     <div className="contact-left">
@@ -47,7 +47,9 @@ export default function Contact (){
                             <input type="text" name="name" placeholder="Your name" required={true}/>
                             <input type="email" name="email" placeholder="Your email" required={true}/>
                             <textarea name="message" rows="8" placeholder="Your message" required={true}></textarea>
-                            <button type="submit" className="btn">Submit</button>
+                            <div className="submit-button-wrapper">
+                                <button type="submit" className="btn">Submit</button>
+                            </div>
                         </form>
                     </div>
                 </div>

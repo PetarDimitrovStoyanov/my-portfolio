@@ -4,7 +4,7 @@ import link from '../../assets/icons/up-right-from-square-solid.svg';
 
 export default function Projects() {
     return (
-        <section className="projects">
+        <section className="projects" id="my-projects">
             <div className="container">
                 <h1 className="sub-title">Recent Projects</h1>
                 <div className="project-list">
