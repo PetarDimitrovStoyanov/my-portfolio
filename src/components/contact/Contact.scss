@@ -1,8 +1,8 @@
-$small-display: 1050px;
+@import '../../variables';
 
 .contact {
   padding: 50px 10%;
-  color: #ababab;
+  color: $light-grey;
   margin-top: 40px;
 
   @media (max-width: $small-display) {
@@ -32,7 +32,7 @@ $small-display: 1050px;
         .sub-title {
           font-size: 60px;
           font-weight: 600;
-          color: #ffffff;
+          color: $white-color;
 
           @media (max-width: $small-display) {
             font-size: 50px;
@@ -46,7 +46,7 @@ $small-display: 1050px;
           gap: 10px;
           flex-wrap: wrap;
           align-items: center;
-          color: #ffffff;
+          color: $white-color;
 
           @media (max-width: $small-display) {
             font-weight: 600;
@@ -82,7 +82,7 @@ $small-display: 1050px;
 
         .phone {
           a {
-            color: #ff004f;
+            color: $red-color;
           }
 
           .link-icon {
@@ -130,11 +130,11 @@ $small-display: 1050px;
         }
 
         .btn {
-          border: 1px solid #ff004f;
+          border: 1px solid $red-color;
           width: fit-content;
           border-radius: 5px;
           padding: 10px 15px;
-          color: #ffffff;
+          color: $white-color;
           margin-bottom: 40px;
           background: transparent;
           cursor: pointer;
@@ -150,8 +150,8 @@ $small-display: 1050px;
         }
 
         .btn:hover {
-          background: #ff004f;
-          color: #ffffff;
+          background: $red-color;
+          color: $white-color;
         }
       }
 
@@ -172,10 +172,10 @@ $small-display: 1050px;
             border: 0;
             width: 100%;
             outline: none;
-            background: #26272B;
+            background: $grey-color;
             padding: 15px;
             margin: 15px 0;
-            color: #ffffff;
+            color: $white-color;
             font-size: 18px;
             border-radius: 6px;
 
@@ -195,11 +195,11 @@ $small-display: 1050px;
             }
 
             .btn {
-              border: 1px solid #ff004f;
+              border: 1px solid $red-color;
               width: fit-content;
               border-radius: 5px;
               padding: 10px 15px;
-              color: #ffffff;
+              color: $white-color;
               margin-bottom: 40px;
               background: transparent;
               cursor: pointer;
@@ -215,8 +215,8 @@ $small-display: 1050px;
             }
 
             .btn:hover {
-              background: #ff004f;
-              color: #ffffff;
+              background: $red-color;
+              color: $white-color;
             }
           }
         }

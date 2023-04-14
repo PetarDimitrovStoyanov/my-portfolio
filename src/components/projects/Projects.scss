@@ -1,8 +1,8 @@
-$small-display: 1050px;
+@import '../../variables';
 
 .projects {
   padding: 50px 10%;
-  color: #ababab;
+  color: $light-grey;
   margin-top: 40px;
 
   @media (max-width: $small-display) {
@@ -13,7 +13,7 @@ $small-display: 1050px;
     .sub-title {
       font-size: 60px;
       font-weight: 600;
-      color: #ffffff;
+      color: $white-color;
 
       @media (max-width: $small-display) {
         font-size: 50px;
@@ -38,7 +38,7 @@ $small-display: 1050px;
         .layer {
           width: 100%;
           height: 0;
-          background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+          background: linear-gradient(rgba(0,0,0,0.6), $red-color);
           border-radius: 10px;
           position: absolute;
           left: 0;
@@ -51,7 +51,7 @@ $small-display: 1050px;
           padding: 0 40px;
           text-align: center;
           font-size: 14px;
-          color: #ffffff;
+          color: $white-color;
           transition: height 0.5s;
 
           .project-title {
@@ -61,11 +61,11 @@ $small-display: 1050px;
 
           .project-reference {
             margin-top: 20px;
-            color: #ff004f;
+            color: $red-color;
             text-decoration: none;
             font-size: 18px;
             line-height: 60px;
-            background: #fff;
+            background: $white-color;
             width: 60px;
             height: 60px;
             border-radius: 50%;

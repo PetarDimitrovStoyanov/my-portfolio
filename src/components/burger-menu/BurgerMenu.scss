@@ -1,4 +1,4 @@
-$burger-menu-display: 1050px;
+@import '../../variables';
 
 .burger-menu {
   display: none;
@@ -17,7 +17,7 @@ $burger-menu-display: 1050px;
     z-index: 1;
     max-width: 250px;
     display: none;
-    background: #ff004f;
+    background: $red-color;
     height: 100%;
     padding: 15px;
 
@@ -30,7 +30,7 @@ $burger-menu-display: 1050px;
       position: relative;
 
       .burger-nav-link {
-        color: white;
+        color: $white-color;
         text-decoration: none;
         font-size: 30px;
         width: 100%;
