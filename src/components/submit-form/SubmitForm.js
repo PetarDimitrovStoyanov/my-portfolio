@@ -1,7 +1,12 @@
 import React, {useState} from 'react';
 import './SubmitForm.scss';
 
+import axios from "axios";
+import * as SUBMIT_SERVICE from "../../service/submittingFormService"
+
 export default function SubmitForm() {
+
+    const [isLoading, setIsLoading] = useState(false);
 
     const [formData, setFormData] = useState({
         name: '',
@@ -52,9 +57,31 @@ export default function SubmitForm() {
 
         doVerificationForm();
 
-        if (Object.keys(errors).length === 0) {
-            console.log(formData);
-            // Here you can add your API calls
+        if (Object.keys(errors).length === 0 && !isLoading) {
+            try {
+                setIsLoading(true);
+                axios.post('https://formsubmit.co/ajax/ee30ae227cc3c49eeaeffae2148aa1b1', formData, {
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                })
+                    .then(() => {
+                        setFormData({
+                            name: '',
+                            email: '',
+                            message: ''
+                        });
+                        SUBMIT_SERVICE.showSuccessNotification('Your email has been sent successfully.');
+                    })
+                    .catch((error) => {
+                        SUBMIT_SERVICE.showErrorNotification('Oops, something went wrong.');
+                        console.error(error)
+                    })
+                    .finally(() => setIsLoading(false));
+            } catch (error) {
+                console.error('Error submitting of email:', error);
+            }
+
         }
     };
 

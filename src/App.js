@@ -6,6 +6,8 @@ import Certificates from "./sections/certificates/Certificates";
 import Projects from "./sections/projects/Projects";
 import Footer from "./sections/footer/Footer";
 import Quote from "./sections/quote/Quote";
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
     return (
@@ -17,6 +19,7 @@ function App() {
             <Projects />
             <Contact />
             <Footer />
+            <ToastContainer />
         </div>
     );
 }
