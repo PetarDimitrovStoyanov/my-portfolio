@@ -44,11 +44,25 @@
   "projects": {
     "project1": {
       "title": "This portfolio",
-      "about": "It represents me as a person and professional developer."
+      "about": "It represents me as a person and professional developer.",
+      "modal": {
+        "technologies": "React, JavaScript, axios, SCSS, react-toastify, swiper, react-i18next & formsubmit",
+        "details": "The application was created to introduce some basic techniques in React & CSS, as well as to demonstrate the integration of external libraries.",
+        "contribution": "This app is made 100% by me only.",
+        "github": "https://github.com/PetarDimitrovStoyanov/my-portfolio",
+        "url": ""
+      }
     },
     "project2": {
       "title": "DRC Akkodis",
-      "about": "Web app for internal company use only that contains list of projects"
+      "about": "Web app for internal company use only that contains list of projects",
+      "modal": {
+        "technologies": "Java (v.11) with Spring, VueJS 2, AWS, Docker, BitBucket, Jira, Figma and etc.",
+        "details": "This application is intended to be used only by employees throughout the Modis/Akkodis global sales department. It is a platform where employees from all over the world can enter, search and view the won and completed projects, as well as check the specifics related to each project. For example: how many and what teams worked on it, how much time and money it cost, what technologies were used, what results were achieved, and etc.",
+        "contribution": "I have worked together with a team on this project. I have worked on backend and frontend, contributing to almost all functionalities in the application.",
+        "github": "",
+        "url": "https://drc-akkodis.com/"
+      }
     },
     "project3": {
       "title": "Storage system",
@@ -77,5 +91,13 @@
   "buttons": {
     "download": "Download CV",
     "submit": "Submit"
+  },
+  "modal": {
+    "technologies": "Technologies, tools and libraries: ",
+    "source": "Source control system repository: ",
+    "url": "Link: ",
+    "contribution": "Personal contribution: ",
+    "details": "Further information: ",
+    "close": "Close"
   }
 }

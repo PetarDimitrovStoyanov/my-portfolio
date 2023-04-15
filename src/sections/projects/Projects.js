@@ -12,19 +12,18 @@ export default function Projects() {
                 <h1 className="sub-title">{t('header.recent-projects')}</h1>
                 <div className="project-list">
                     <Project
+                        id={1}
                         title={t('projects.project1.title')}
                         about={t('projects.project1.about')}
+                        url={''}
                         imgFileName="portfolio-project.PNG"
                     />
                     <Project
+                        id={2}
                         title={t('projects.project2.title')}
                         about={t('projects.project2.about')}
+                        url={t('projects.project2.modal.url')}
                         imgFileName="drc-akkodis.PNG"
-                    />
-                    <Project
-                        title={t('projects.project3.title')}
-                        about={t('projects.project3.about')}
-                        imgFileName="test.PNG"
                     />
                 </div>
             </div>
