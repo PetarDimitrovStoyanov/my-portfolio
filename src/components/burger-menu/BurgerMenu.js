@@ -3,8 +3,15 @@ import './BurgerMenu.scss';
 
 import close from "../../assets/icons/close.svg";
 import menu from "../../assets/icons/menu.svg";
+import {useTranslation} from "react-i18next";
+
+import enFlag from "../../assets/flags/gb.svg";
+import bgFlag from "../../assets/flags/bg.svg";
+
+import Flag from "../flag/Flag";
 
 export default function BurgerMenu() {
+    const { t } = useTranslation();
     const menuRef = useRef();
     const closeBtnRef = useRef();
     const openBtnRef = useRef();
@@ -19,19 +26,20 @@ export default function BurgerMenu() {
         <section className="burger-menu">
             <ul className="burger-ul" ref={menuRef}>
                 <li className="burger-li">
-                    <a className="burger-nav-link" href="#home" onClick={toggleMenu}>Home</a>
+                    <a className="burger-nav-link" href="#about-me" onClick={toggleMenu}>{t('header.about')}</a>
                 </li>
                 <li className="burger-li">
-                    <a className="burger-nav-link" href="#about-me" onClick={toggleMenu}>About Me</a>
+                    <a className="burger-nav-link" href="#my-certificates" onClick={toggleMenu}>{t('header.my-certificates')}</a>
                 </li>
                 <li className="burger-li">
-                    <a className="burger-nav-link" href="#my-certificates" onClick={toggleMenu}>My Certificates</a>
+                    <a className="burger-nav-link" href="#my-projects" onClick={toggleMenu}>{t('header.recent-projects')}</a>
                 </li>
                 <li className="burger-li">
-                    <a className="burger-nav-link" href="#my-projects" onClick={toggleMenu}>Recent Projects</a>
+                    <a className="burger-nav-link" href="#contact" onClick={toggleMenu}>{t('header.contact')}</a>
                 </li>
-                <li className="burger-li">
-                    <a className="burger-nav-link" href="#contact" onClick={toggleMenu}>Contact</a>
+                <li className="burger-li languages">
+                    <Flag language="bg" flag={bgFlag} />
+                    <Flag language="en" flag={enFlag} />
                 </li>
                 <li className="burger-li">
                     <img src={close} alt="close" className="menu-burger close" ref={closeBtnRef} onClick={toggleMenu}/>

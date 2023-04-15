@@ -10,8 +10,10 @@ import cv from '../../assets/cv/cv.pdf';
 
 import SubmitForm from "../../components/submit-form/SubmitForm";
 import * as SUBMIT_SERVICE from "../../service/submittingFormService";
+import {useTranslation} from "react-i18next";
 
 export default function Contact (){
+    const { t } = useTranslation();
 
     function downloadCV() {
         try {
@@ -19,9 +21,9 @@ export default function Contact (){
             link.href = cv;
             link.download = 'cv.pdf';
             link.click();
-            SUBMIT_SERVICE.showSuccessNotification("The CV has been downloaded successfully.")
+            SUBMIT_SERVICE.showSuccessNotification(t('notifications.success-download'))
         } catch (error) {
-            SUBMIT_SERVICE.showErrorNotification('There was a problem with the downloading of CV.');
+            SUBMIT_SERVICE.showErrorNotification(t('notifications.error-download'));
             console.error(error)
         }
     }
@@ -31,7 +33,7 @@ export default function Contact (){
             <div className="container">
                 <div className="row">
                     <div className="contact-left">
-                        <h1 className="sub-title">Contact Me</h1>
+                        <h1 className="sub-title">{t('header.contact')}</h1>
                         <span className="email">
                             <img src={email} alt="email" className="link-icon email"/>
                             <p>petar.dimitrov.stoyanov@gmail.com</p>
@@ -48,7 +50,7 @@ export default function Contact (){
                                 <img src={github} alt="github" className="link-icon github"/>
                             </a>
                         </div>
-                        <button onClick={downloadCV} className="btn">Download CV</button>
+                        <button onClick={downloadCV} className="neon-btn">{t('buttons.download')}</button>
                     </div>
                     <div className="contact-right">
                         <SubmitForm />

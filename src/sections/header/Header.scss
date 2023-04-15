@@ -50,6 +50,12 @@
         }
       }
       .ul-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
         @media (max-width: $burger-menu-display) {
           display: none;
         }
@@ -57,7 +63,7 @@
         .list-item {
           display: inline-block;
           list-style: none;
-          margin: 10px 20px;
+          margin: 10px 15px;
           position: relative;
 
           .nav-link {
@@ -80,6 +86,14 @@
           .nav-link:hover::after {
             width: 100%;
           }
+        }
+
+        .languages {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          justify-content: center;
+          width: 60px;
         }
       }
     }
