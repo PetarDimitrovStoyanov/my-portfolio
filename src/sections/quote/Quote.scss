@@ -12,5 +12,11 @@
     font-weight: 300;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 70px;
+
+    @media (max-width: $small-display) {
+      word-break: break-word;
+      font-size: 25px;
+      padding: 70px 0;
+    }
   }
 }

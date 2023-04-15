@@ -103,7 +103,7 @@
       font-size: 30px;
 
       @media (max-width: $small-display) {
-        margin-top: 63vh;
+        margin-top: calc(100vh - 350px);
         font-size: 18px;
       }
 
