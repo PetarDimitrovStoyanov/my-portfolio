@@ -27,5 +27,10 @@
     place-items: center;
     font-size: 26px;
     color: $red-color;
+
+    .arrow-up {
+      width: 15px;
+      filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(26deg) brightness(110%) contrast(101%);
+    }
   }
 }

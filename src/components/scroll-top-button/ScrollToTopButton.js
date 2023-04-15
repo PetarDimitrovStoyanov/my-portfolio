@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef }  from 'react';
 import './ScrollToTopButton.scss';
+import arrow from "../../assets/icons/arrow-up-solid.svg";
 
 export default function ScrollToTopButton() {
     const buttonRef = useRef();
@@ -38,7 +39,7 @@ export default function ScrollToTopButton() {
     return (
         <div id="progress" ref={buttonRef}>
             <span id="progress-value" onClick={scrollToTop}>
-                &#x1F815;
+                <img src={arrow} alt="arrow" className="arrow-up"/>
             </span>
         </div>
     );
