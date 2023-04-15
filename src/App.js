@@ -11,6 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import i18n from '../src/service/translations/i18n';
 import {I18nextProvider} from "react-i18next";
+import ScrollToTopButton from "./components/scroll-top-button/ScrollToTopButton";
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                 <Contact/>
                 <Footer/>
                 <ToastContainer/>
+                <ScrollToTopButton />
             </div>
         </I18nextProvider>
     );
