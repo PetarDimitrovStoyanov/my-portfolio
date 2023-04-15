@@ -15,7 +15,7 @@ export default function Projects() {
                         id={1}
                         title={t('projects.project1.title')}
                         about={t('projects.project1.about')}
-                        url={''}
+                        url={t('projects.project1.modal.url')}
                         imgFileName="portfolio-project.PNG"
                     />
                     <Project
