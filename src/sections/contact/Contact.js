@@ -9,14 +9,21 @@ import phone from "../../assets/icons/phone-solid.svg";
 import cv from '../../assets/cv/cv.pdf';
 
 import SubmitForm from "../../components/submit-form/SubmitForm";
+import * as SUBMIT_SERVICE from "../../service/submittingFormService";
 
 export default function Contact (){
 
     function downloadCV() {
-        const link = document.createElement('a');
-        link.href = cv;
-        link.download = 'cv.pdf';
-        link.click();
+        try {
+            const link = document.createElement('a');
+            link.href = cv;
+            link.download = 'cv.pdf';
+            link.click();
+            SUBMIT_SERVICE.showSuccessNotification("The CV has been downloaded successfully.")
+        } catch (error) {
+            SUBMIT_SERVICE.showErrorNotification('There was a problem with the downloading of CV.');
+            console.error(error)
+        }
     }
 
     return (
