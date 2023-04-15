@@ -1,7 +1,9 @@
 import React from "react";
 import './About.scss';
+import {useTranslation} from "react-i18next";
 
 export default function About() {
+    const { t } = useTranslation();
 
     function open(clazz) {
         Array.from(document.querySelectorAll('.active-link'))
@@ -19,52 +21,54 @@ export default function About() {
                         <img src={require('../../assets/official-hd.png')} alt="user"/>
                     </div>
                     <div className="about-col-2">
-                        <h1 className="sub-title">About Me</h1>
+                        <h1 className="sub-title">{t('header.about')}</h1>
                         <div className="about-col-1 small">
                             <img src={require('../../assets/official-hd.png')} alt="user"/>
                         </div>
-                        <p>I am passionate about coding and like to find solutions to complex problems.
-                            With approx of 2 years of experience in the field, I have developed a skillset
-                            in frontend and backend code development, and I am always eager to learn and take on new
-                            challenges. <br/>
-                            My approach to development is analytical, and I believe that this is essential
-                            for success. I am dedicated to delivering high-quality work (on time) that meets the
-                            requirements while pushing the boundaries of what I can and know.
-                            In my free time, I like to spend time learning new things and experimenting, which helps
-                            to keep me inspired and motivated.
-                            If you are looking for a person who has "fire" for doing things, do not leave when it is
-                            hard, always give his best, and always strive to improve, I would love to hear from you.
+                        <p>{t('about-me.description1')}
+                            <br/>
+                            {t('about-me.description2')}
+                            <br/>
+                            {t('about-me.description3')}
+                            <br/>
+                            {t('about-me.description4')}
                         </p>
                         <div className="tab-titles">
-                            <p className="tab-links active-link skills" onClick={ () => open('skills')}>Skills</p>
-                            <p className="tab-links experience" onClick={ () => open('experience')}>Experience</p>
-                            <p className="tab-links education" onClick={ () => open('education')}>Education</p>
+                            <p className="tab-links active-link skills" onClick={ () => open('skills')}>{t('about-me.skills')}</p>
+                            <p className="tab-links experience" onClick={ () => open('experience')}>{t('about-me.experience')}</p>
+                            <p className="tab-links education" onClick={ () => open('education')}>{t('about-me.education')}</p>
                         </div>
                         <div className="tab-contents active-link skills">
                             <ul>
-                                <li className="tab-content-items"><span>Frontend Development using <br/> React, VueJs and Angular </span></li>
-                                <li className="tab-content-items"><span>Backend Development using Java and Spring</span></li>
-                                <li className="tab-content-items"><span>Working with databases - MySQL and MongoDB</span></li>
+                                <li className="tab-content-items"><span>Frontend Development {t('about-me.skill1.using')}
+                                    <br/> React, VueJs {t('about-me.skill1.and')} Angular </span></li>
+                                <li className="tab-content-items"><span>Backend Development {t('about-me.skill1.using')}
+                                     Java {t('about-me.skill1.and')} Spring</span></li>
+                                <li className="tab-content-items"><span>{t('about-me.skill1.working-database')}
+                                    - MySQL {t('about-me.skill1.and')} MongoDB</span></li>
                                 <li className="tab-content-items"><span>Source control system - Git</span></li>
                                 <li className="tab-content-items"><span>Docker</span></li>
-                                <li className="tab-content-items"><span>Kubernetes (beginner level)</span></li>
-                                <li className="tab-content-items"><span>DevOps with AWS (beginner level)</span></li>
+                                <li className="tab-content-items"><span>Kubernetes ({t('about-me.skill1.beginner')})</span></li>
+                                <li className="tab-content-items"><span>DevOps {t('about-me.skill1.and')} AWS ({t('about-me.skill1.beginner')})</span></li>
                             </ul>
                         </div>
                         <div className="tab-contents experience">
                             <ul>
-                                <li className="tab-content-items"><span>Multiple projects <br/> for full time work and side clients (2+ years)</span></li>
-                                <li className="tab-content-items"><span>Experimental projects (4+ years)</span></li>
-                                <li className="tab-content-items"><span>Educational projects (4+ years)</span></li>
-                                <li className="tab-content-items"><span>Projects assessment of students (1.5+ years) in SoftUni</span></li>
+                                <li className="tab-content-items"><span>{t('about-me.experience1.multiple')} <br/>
+                                    {t('about-me.experience1.multiple-addition')}</span></li>
+                                <li className="tab-content-items"><span>{t('about-me.experience1.experimental')}</span></li>
+                                <li className="tab-content-items"><span>{t('about-me.experience1.education')}</span></li>
+                                <li className="tab-content-items"><span>{t('about-me.experience1.assessment')}</span></li>
                             </ul>
                         </div>
                         <div className="tab-contents education">
                             <ul>
-                                <li className="tab-content-items"><span>Primary education completed at the construction,<br/> architecture and geodesy high school</span></li>
-                                <li className="tab-content-items"><span>Bachelor degree for marketing at <br/> the European College in Plovdiv</span></li>
-                                <li className="tab-content-items"><span>Software Engineering, Full Stack Developer at SoftUni</span></li>
-                                <li className="tab-content-items"><span>Many web development courses on LinkedIn, Udemy, etc.</span></li>
+                                <li className="tab-content-items"><span>{t('about-me.education1.primary')}<br/>
+                                    {t('about-me.education1.primary-addition')}</span></li>
+                                <li className="tab-content-items"><span>{t('about-me.education1.bachelor')} <br/>
+                                    {t('about-me.education1.bachelor-addition')}</span></li>
+                                <li className="tab-content-items"><span>{t('about-me.education1.software')}</span></li>
+                                <li className="tab-content-items"><span>{t('about-me.education1.development')}</span></li>
                             </ul>
                         </div>
                     </div>

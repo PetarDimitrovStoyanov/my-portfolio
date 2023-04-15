@@ -23,8 +23,10 @@ import slide_image_13 from "../../assets/certificates/react.jpg";
 import slide_image_14 from "../../assets/certificates/spring-data.jpg";
 import slide_image_15 from "../../assets/certificates/spring-advanced.jpg";
 import slide_image_16 from "../../assets/certificates/spring-fundamentals.jpg";
+import {useTranslation} from "react-i18next";
 
 export default function Certificates() {
+    const { t } = useTranslation();
 
     const certificates = [
         slide_image_1,
@@ -48,7 +50,7 @@ export default function Certificates() {
     return (
         <section className="certificates" id="my-certificates">
             <div className="container">
-                <h1 className="sub-title">My Certificates</h1>
+                <h1 className="sub-title">{t('header.my-certificates')}</h1>
                 <div className="certificate-list">
                     <Swiper
                         effect={'coverflow'}

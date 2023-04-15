@@ -1,0 +1,81 @@
+{
+  "header": {
+    "about": "About Me",
+    "my-certificates": "My Certificates",
+    "recent-projects": "Recent Projects",
+    "contact": "Contact",
+    "hello": "Hello, ",
+    "i-am": "I'm ",
+    "petar": "Petar ",
+    "stoyanov": "Stoyanov"
+  },
+  "about-me": {
+    "description1": "I am passionate about coding and like to find solutions to complex problems. With approx of 2 years of experience in the field, I have developed a skillset in frontend and backend code development, and I am always eager to learn and take on new challenges.",
+    "description2": "My approach to development is analytical, and I believe that this is essential for success. I am dedicated to delivering high-quality work (on time) that meets the requirements while pushing the boundaries of what I can and know.",
+    "description3": "In my free time, I like to spend time learning new things and experimenting, which helps to keep me inspired and motivated.",
+    "description4": "If you are looking for a person who has \"fire\" for doing things, do not leave when it is hard, always give his best, and always strive to improve, I would love to hear from you.",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education",
+    "skill1": {
+      "using": "using ",
+      "and": "and",
+      "working-database": "Working with databases ",
+      "with": "with",
+      "beginner": "beginner level"
+    },
+    "experience1": {
+      "multiple": "Multiple projects",
+      "multiple-addition": "for full time work and side clients (2+ years)",
+      "experimental": "Experimental projects (4+ years)",
+      "education": "Educational projects (4+ years)",
+      "assessment": "Projects assessment of students (1.5+ years) in SoftUni"
+    },
+    "education1": {
+      "primary": "Primary education completed at the construction,",
+      "primary-addition": "architecture and geodesy high school",
+      "bachelor": "Bachelor degree for marketing at",
+      "bachelor-addition": "the European College in Plovdiv",
+      "software": "Software Engineering, Full Stack Developer at SoftUni",
+      "development": "Many web development courses on LinkedIn, Udemy, etc."
+    }
+  },
+  "quote": "HARD WORK BEATS TALENT WHEN TALENT DOESN’T WORK HARD.",
+  "projects": {
+    "project1": {
+      "title": "This portfolio",
+      "about": "It represents me as a person and professional developer."
+    },
+    "project2": {
+      "title": "DRC Akkodis",
+      "about": "Web app for internal company use only that contains list of projects"
+    },
+    "project3": {
+      "title": "Storage system",
+      "about": "Desktop application for issuing of payment notes."
+    }
+  },
+  "submit-form": {
+    "errors": {
+      "name-required": "Name is required",
+      "email-required": "Email is required",
+      "email-invalid": "Email is invalid",
+      "message-required": "Message is required"
+    },
+    "placeholders": {
+      "your-name": "Your name",
+      "your-email": "Your email",
+      "your-message": "Your message"
+    }
+  },
+  "notifications": {
+    "wrong": "Oops, something went wrong.",
+    "success-email": "Your email has been sent successfully.",
+    "success-download": "The CV has been downloaded successfully.",
+    "error-download": "There was a problem with the downloading of CV."
+  },
+  "buttons": {
+    "download": "Download CV",
+    "submit": "Submit"
+  }
+}

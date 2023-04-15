@@ -3,8 +3,10 @@ import './SubmitForm.scss';
 
 import axios from "axios";
 import * as SUBMIT_SERVICE from "../../service/submittingFormService"
+import {useTranslation} from "react-i18next";
 
 export default function SubmitForm() {
+    const { t } = useTranslation();
 
     const [isLoading, setIsLoading] = useState(false);
 
@@ -36,17 +38,17 @@ export default function SubmitForm() {
         const newErrors = {};
 
         if (formData.name.trim() === '') {
-            newErrors.name = 'Name is required';
+            newErrors.name = t('submit-form.errors.name-required');
         }
 
         if (formData.email.trim() === '') {
-            newErrors.email = 'Email is required';
+            newErrors.email = t('submit-form.errors.email-required');
         } else if (!isValidEmail(formData.email)) {
-            newErrors.email = 'Email is invalid';
+            newErrors.email = t('submit-form.errors.email-invalid');
         }
 
         if (formData.message.trim() === '') {
-            newErrors.message = 'Message is required';
+            newErrors.message = t('submit-form.errors.message-required');
         }
 
         setErrors(newErrors);
@@ -71,10 +73,10 @@ export default function SubmitForm() {
                             email: '',
                             message: ''
                         });
-                        SUBMIT_SERVICE.showSuccessNotification('Your email has been sent successfully.');
+                        SUBMIT_SERVICE.showSuccessNotification(t('notifications.success-email'));
                     })
                     .catch((error) => {
-                        SUBMIT_SERVICE.showErrorNotification('Oops, something went wrong.');
+                        SUBMIT_SERVICE.showErrorNotification(t('notifications.wrong'));
                         console.error(error)
                     })
                     .finally(() => setIsLoading(false));
@@ -95,7 +97,7 @@ export default function SubmitForm() {
                 type="text"
                 name="name"
                 value={formData.name}
-                placeholder="Your name"
+                placeholder={t('submit-form.placeholders.your-name')}
                 required
                 onChange={handleInputChange}
             />
@@ -103,7 +105,7 @@ export default function SubmitForm() {
             <input
                 type="email"
                 name="email"
-                placeholder="Your email"
+                placeholder={t('submit-form.placeholders.your-email')}
                 required
                 value={formData.email}
                 onChange={handleInputChange}
@@ -113,13 +115,13 @@ export default function SubmitForm() {
                 name="message"
                 rows="8"
                 value={formData.message}
-                placeholder="Your message"
+                placeholder={t('submit-form.placeholders.your-message')}
                 required
                 onChange={handleInputChange}
             />
             {errors.message && <span className="error-message">{errors.message}</span>}
             <div className="submit-button-wrapper">
-                <button type="submit" className="btn">Submit</button>
+                <button type="submit" className="btn">{t('buttons.submit')}</button>
             </div>
         </form>
     );

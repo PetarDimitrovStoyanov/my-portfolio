@@ -129,15 +129,21 @@
           }
         }
 
-        .btn {
+        .neon-btn {
+          font-size: 14px;
+          display: inline-block;
           border: 1px solid $red-color;
           width: fit-content;
           border-radius: 5px;
           padding: 10px 15px;
           color: $white-color;
-          margin-bottom: 40px;
-          background: transparent;
           cursor: pointer;
+          background: transparent;
+          text-shadow: 0 0 0.125em hsl(0, 0%, 100% / 0.2), 0 0 0.25em $red-color;
+          box-shadow: inset 0 0 1em 0 $red-color, 0 0 1em 0 $red-color;
+          position: relative;
+          transition: background-color 100ms linear;
+          margin-bottom: 80px;
 
           @media (max-width: $small-display) {
             font-weight: 600;
@@ -149,9 +155,41 @@
           }
         }
 
-        .btn:hover {
+        .neon-btn::before {
+          pointer-events: none;
+          content: "";
+          position: absolute;
           background: $red-color;
-          color: $white-color;
+          top: 108%;
+          left: 0;
+          width: 105%;
+          height: 75%;
+          transform: perspective(1em) rotateX(40deg) scale(1.3, 0.30);
+          filter: blur(2em);
+        }
+
+        .neon-btn::after {
+          content: "";
+          position: absolute;
+          background: $red-color;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          box-shadow: 0 0 2.3em 0.7em $red-color;
+          opacity: 0;
+          transition: opacity 100ms linear;
+        }
+
+        .neon-btn:hover, .neon-btn:focus {
+          background: $red-color;
+          color: #080808;
+          font-weight: 700;
+          text-shadow: none;
+        }
+
+        .neon-btn:hover::after {
+          opacity: 0.5;
         }
       }
 
