@@ -12,6 +12,8 @@ import SubmitForm from "../../components/submit-form/SubmitForm";
 import * as SUBMIT_SERVICE from "../../service/submittingFormService";
 import {useTranslation} from "react-i18next";
 
+import { logEvent } from '../../analythics';
+
 export default function Contact (){
     const { t } = useTranslation();
 
@@ -21,6 +23,7 @@ export default function Contact (){
             link.href = cv;
             link.download = 'cv.pdf';
             link.click();
+            logEvent('button', 'download_cv');
             SUBMIT_SERVICE.showSuccessNotification(t('notifications.success-download'))
         } catch (error) {
             SUBMIT_SERVICE.showErrorNotification(t('notifications.error-download'));
