@@ -23,7 +23,7 @@ export default function Contact (){
             link.href = cv;
             link.download = 'cv.pdf';
             link.click();
-            logEvent('button', 'G-KLS7M2Q5WZ');
+            logEvent('button', 'download_cv');
             SUBMIT_SERVICE.showSuccessNotification(t('notifications.success-download'))
         } catch (error) {
             SUBMIT_SERVICE.showErrorNotification(t('notifications.error-download'));

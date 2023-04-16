@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 import { initGA, logPageView } from './analythics';
 
-initGA('G-57PDJTNEDY');
+initGA('G-KLS7M2Q5WZ');
 logPageView();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
