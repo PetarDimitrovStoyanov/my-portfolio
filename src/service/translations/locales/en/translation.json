@@ -46,7 +46,7 @@
       "title": "This portfolio",
       "about": "It represents me as a person and professional developer.",
       "modal": {
-        "technologies": "React, JavaScript, axios, SCSS, react-toastify, swiper, react-i18next & formsubmit",
+        "technologies": "React, JavaScript, axios, SCSS, react-toastify, swiper, react-i18next, google analytics & formsubmit",
         "details": "The application was created to introduce some basic techniques in React & CSS, as well as to demonstrate the integration of external libraries.",
         "contribution": "This app is made 100% by me only.",
         "github": "https://github.com/PetarDimitrovStoyanov/my-portfolio",
