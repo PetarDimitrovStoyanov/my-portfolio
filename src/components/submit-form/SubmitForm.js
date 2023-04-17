@@ -4,6 +4,7 @@ import './SubmitForm.scss';
 import axios from "axios";
 import * as SUBMIT_SERVICE from "../../service/submittingFormService"
 import {useTranslation} from "react-i18next";
+import Spinner from "../spinner/Spinner";
 
 export default function SubmitForm() {
     const { t } = useTranslation();
@@ -93,6 +94,7 @@ export default function SubmitForm() {
 
     return (
         <form onSubmit={handleSubmit} className="form">
+            {isLoading ? <Spinner/> : ''}
             <input
                 type="text"
                 name="name"
