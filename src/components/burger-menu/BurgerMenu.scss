@@ -37,6 +37,12 @@
       }
     }
 
+    .close-wrapper {
+      position: absolute;
+      bottom: 30px;
+      right: -5%;
+    }
+
     .languages {
       display: flex;
       flex-direction: row;

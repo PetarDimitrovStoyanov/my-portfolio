@@ -49,7 +49,7 @@ export default function About() {
                                 <li className="tab-content-items"><span>Source control system - Git</span></li>
                                 <li className="tab-content-items"><span>Docker</span></li>
                                 <li className="tab-content-items"><span>Kubernetes ({t('about-me.skill1.beginner')})</span></li>
-                                <li className="tab-content-items"><span>DevOps {t('about-me.skill1.and')} AWS ({t('about-me.skill1.beginner')})</span></li>
+                                <li className="tab-content-items"><span>DevOps {t('about-me.skill1.with')} AWS ({t('about-me.skill1.beginner')})</span></li>
                             </ul>
                         </div>
                         <div className="tab-contents experience">

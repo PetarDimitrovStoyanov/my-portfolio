@@ -41,7 +41,7 @@ export default function BurgerMenu() {
                     <Flag language="bg" flag={bgFlag} />
                     <Flag language="en" flag={enFlag} />
                 </li>
-                <li className="burger-li">
+                <li className="burger-li close-wrapper">
                     <img src={close} alt="close" className="menu-burger close" ref={closeBtnRef} onClick={toggleMenu}/>
                 </li>
             </ul>
