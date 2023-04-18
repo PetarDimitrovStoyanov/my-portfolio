@@ -36,11 +36,10 @@
       "persist":"Persistent"
     },
     "experience1": {
-      "multiple": "Multiple projects",
-      "multiple-addition": "for full time work and side clients (2+ years)",
-      "experimental": "Experimental projects (4+ years)",
-      "education": "Educational projects (4+ years)",
-      "assessment": "Projects assessment of students (1.5+ years) in SoftUni"
+      "multiple-addition": "Working on multiple projects including full-time and side clients (2+ years)",
+      "projects": "Experimental and Educational projects (4+ years)",
+      "assessment": "Projects assessment of students (1.5+ years) in SoftUni",
+      "assessment2": "as part of the evaluator committee"
     },
     "education1": {
       "primary": "Primary education completed at the construction,",
@@ -59,7 +58,7 @@
       "modal": {
         "technologies": "React, JavaScript, axios, SCSS, react-toastify, swiper, react-i18next, google analytics & formsubmit",
         "details": "The application was created to introduce some basic techniques in React & CSS, as well as to demonstrate the integration of external libraries.",
-        "contribution": "This app is made 100% by me only.",
+        "contribution": "This app was made 100% by me and has the following functionalities:\n•\tDownloading of CV\n•\tChecking of my recent projects\n•\tSending emails\n•\tPreviewing of my: tech skills, soft skills, education and experience\n•\tPreviewing of my certificates",
         "github": "https://github.com/PetarDimitrovStoyanov/my-portfolio",
         "url": "https://petar-stoyanov-portfolio.vercel.app/"
       }
@@ -70,7 +69,7 @@
       "modal": {
         "technologies": "Java (v.11) with Spring, VueJS 2, AWS, Docker, BitBucket, Jira, Figma and etc.",
         "details": "This application is intended to be used only by employees throughout the Modis/Akkodis global sales department. It is a platform where employees from all over the world can enter, search and view the won and completed projects, as well as check the specifics related to each project. For example: how many and what teams worked on it, how much time and money it cost, what technologies were used, what results were achieved, and etc.",
-        "contribution": "I have worked together with a team on this project. I have worked on backend and frontend, contributing to almost all functionalities in the application.",
+        "contribution": "This project was a team work. But my personal contribution is:\n•\tCreating and maintaining of web pages and components by given template design in Figma on VueJS 2 using JavaScript, HTML, CSS and SASS.\n•\tIntegrating of external libraries such as: “vue-router”, “i18n” for translations, “vue-msal” for sign-in from active directories,\"particles”, “axios”, “animate.css”, and others.\n•\t\thave personally created approx.75% of the front-end on the app which I’m working on with the team.\n•\tCreating new REST endopoints on the back-end using Java, Spring Framework, Spring Data JPA, Hibernate, and MySQL.\n•\tImplementing and extending of the project business logic using Domain Driven Design and Hexagonal Architecture such as login, search, CRUD and etc.\n•\tContribution to the integration of external dependencies as: AWS S3, AWS translation, generating of PDF, PPT, and DOCX documents\n•\tI have personally refactored 65% of the back-end and the database (with liquidbase) in order to improve/optimize the performance.\n•\tPart of the projects that implements Agile methodologies and Scrum practices\n",
         "github": "",
         "url": "https://drc-akkodis.com/"
       }

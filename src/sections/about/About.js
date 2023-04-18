@@ -66,11 +66,12 @@ export default function About() {
                         </div>
                         <div className="tab-contents experience">
                             <ul>
-                                <li className="tab-content-items"><span>{t('about-me.experience1.multiple')} <br/>
-                                    {t('about-me.experience1.multiple-addition')}</span></li>
-                                <li className="tab-content-items"><span>{t('about-me.experience1.experimental')}</span></li>
-                                <li className="tab-content-items"><span>{t('about-me.experience1.education')}</span></li>
-                                <li className="tab-content-items"><span>{t('about-me.experience1.assessment')}</span></li>
+                                <li className="tab-content-items"><span>{t('about-me.experience1.multiple-addition')}</span></li>
+                                <li className="tab-content-items"><span>{t('about-me.experience1.projects')}</span></li>
+                                <li className="tab-content-items"><span>
+                                    {t('about-me.experience1.assessment')} <br/>
+                                    {t('about-me.experience1.assessment2')}
+                                </span></li>
                             </ul>
                         </div>
                         <div className="tab-contents education">

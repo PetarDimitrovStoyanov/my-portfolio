@@ -15,6 +15,7 @@ export default function BurgerMenu() {
     const menuRef = useRef();
     const closeBtnRef = useRef();
     const openBtnRef = useRef();
+    const { i18n } = useTranslation('home');
 
     function toggleMenu() {
         menuRef.current.classList.toggle('active');
@@ -38,8 +39,10 @@ export default function BurgerMenu() {
                     <a className="burger-nav-link" href="#contact" onClick={toggleMenu}>{t('header.contact')}</a>
                 </li>
                 <li className="burger-li languages">
-                    <Flag language="bg" flag={bgFlag} />
-                    <Flag language="en" flag={enFlag} />
+                    {i18n.language !== 'en' ?
+                        <Flag language="en" flag={enFlag} />
+                        : <Flag language="bg" flag={bgFlag} />
+                    }
                 </li>
                 <li className="burger-li close-wrapper">
                     <img src={close} alt="close" className="menu-burger close" ref={closeBtnRef} onClick={toggleMenu}/>
