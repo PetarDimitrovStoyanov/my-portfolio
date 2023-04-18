@@ -14,7 +14,8 @@
     "description2": "My approach to development is analytical, and I believe that this is essential for success. I am dedicated to delivering high-quality work (on time) that meets the requirements while pushing the boundaries of what I can and know.",
     "description3": "In my free time, I like to spend time learning new things and experimenting, which helps to keep me inspired and motivated.",
     "description4": "If you are looking for a person who has \"fire\" for doing things, do not leave when it is hard, always give his best, and always strive to improve, I would love to hear from you.",
-    "skills": "Skills",
+    "tech-skills": "Technical skills",
+    "soft-skills": "Soft skills",
     "experience": "Experience",
     "education": "Education",
     "skill1": {
@@ -22,7 +23,17 @@
       "and": "and",
       "working-database": "Working with databases ",
       "with": "with",
-      "beginner": "beginner level"
+      "beginner": "beginner level",
+      "microservice": "Microservices"
+    },
+    "soft-skills1": {
+      "communication": "Communication & Team work",
+      "critical": "Problem solving & Critical thinking",
+      "pressure": "Work under pressure, Willpower and discipline",
+      "ethic": "Work ethic",
+      "multitasking": "Ability to multitasking",
+      "fast": "Fast learner",
+      "persist":"Persistent"
     },
     "experience1": {
       "multiple": "Multiple projects",

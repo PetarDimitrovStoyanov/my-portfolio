@@ -35,6 +35,10 @@ export default function SubmitForm() {
         setErrors({...errors});
     }
 
+    function areNoErrors() {
+        return (Object.keys(errors).length === 0 || isValidEmail(formData.email));
+    }
+
     const doVerificationForm = () => {
         const newErrors = {};
 
@@ -60,7 +64,7 @@ export default function SubmitForm() {
 
         doVerificationForm();
 
-        if (Object.keys(errors).length === 0 && !isLoading) {
+        if (areNoErrors() && !isLoading) {
             try {
                 setIsLoading(true);
                 axios.post('https://formsubmit.co/ajax/ee30ae227cc3c49eeaeffae2148aa1b1', formData, {

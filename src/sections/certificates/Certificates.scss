@@ -17,6 +17,10 @@
       @media (max-width: $small-display) {
         font-size: 50px;
       }
+
+      @media (max-width: 325px) {
+        word-break: break-all;
+      }
     }
 
     .certificate-list {
