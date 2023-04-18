@@ -1,4 +1,8 @@
 # This is a simple portfolio website
+It was created to introduce some basic techniques in React & CSS, as well as to demonstrate the integration of external libraries.
+
+## Used external libraries:
+ - axios, SCSS, react-toastify, swiper, react-i18next, google analytics & formsubmit
 
 ## Available Scripts
 
