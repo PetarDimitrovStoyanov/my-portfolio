@@ -86,6 +86,10 @@
           .nav-link:hover::after {
             width: 100%;
           }
+
+          .cv {
+            cursor: pointer;
+          }
         }
 
         .languages {
@@ -94,6 +98,7 @@
           gap: 10px;
           justify-content: center;
           width: 60px;
+          margin-left: 0;
         }
       }
     }

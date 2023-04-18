@@ -1,6 +1,13 @@
 # This is a simple portfolio website
 It was created to introduce some basic techniques in React & CSS, as well as to demonstrate the integration of external libraries.
 
+This application has the following functionalities:
+* Downloading of CV
+* Checking of my recent projects
+* Sending emails
+* Previewing of my: tech skills, soft skills, education and experience
+* Previewing of my certificates
+
 ## Used external libraries:
  - axios, SCSS, react-toastify, swiper, react-i18next, google analytics & formsubmit
 
