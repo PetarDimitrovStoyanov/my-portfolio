@@ -1,0 +1,189 @@
+@import '../../../variables';
+
+.experience-container {
+  background-image: url('../../../assets/experiance-background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 10% 200px calc(10% + 31.5px);
+  height: fit-content;
+
+  @media (max-width: $small-display) {
+    padding-top: 50px;
+  }
+
+  @media (max-width: $mobile-display) {
+    padding-top: 25px;
+    padding-bottom: 125px;
+  }
+
+  .experience-wrapper {
+    margin-top: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+
+    .line {
+      position: relative;
+      align-self: stretch;
+
+      .work {
+        padding-bottom: 40px;
+        position: relative;;
+        background-color: transparent;
+        width: 65vw;
+
+        .position {
+          @media (max-width: $mobile-display) {
+            line-height: 1.2;
+          }
+        }
+
+        .description {
+          color: $light-grey;
+          white-space: pre-line;
+
+          @media (max-width: $mobile-display) {
+            font-size: 18px;
+            line-height: 1.4;
+            margin-top: 10px;
+          }
+        }
+
+        .promoted {
+          color: $red-color;
+        }
+
+        p {
+          @media (max-width: $mobile-display) {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .work::before {
+        content: "";
+        top: 8.5px;
+        width: 10px;
+        border-radius: 50%;
+        height: 10px;
+        background: $red-color;
+        left: -31.5px;
+        position: absolute;
+      }
+
+      .work::after {
+        content: "";
+        height: 10.5px;
+        width: 10.5px;
+        background-color: $light-grey;
+        top: 8.5px;
+        left: -31.5px;
+        border-radius: 50%;
+        position: absolute;
+      }
+
+      .observed::after {
+        content: "";
+        border: 3px solid $red-color;
+        background-color: transparent;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        top: 0.8px;
+        left: -39.4px;
+        animation: pulsate 1s ease-out;
+        animation-iteration-count: infinite;
+        -webkit-animation: pulsate 1s ease-out;
+        -webkit-animation-iteration-count: infinite;
+        opacity: 0;
+      }
+
+      @keyframes pulsate {
+        0% {
+          transform: scale(0.1, 0.1);
+          opacity: 0.0;
+        }
+        50% {
+          opacity: 1.0;
+        }
+        100% {
+          transform: scale(1.2, 1.2);
+          opacity: 0.0;
+        }
+      }
+
+      @-webkit-keyframes pulsate {
+        0% {
+          -webkit-transform: scale(0.1, 0.1);
+          opacity: 0.0;
+        }
+        50% {
+          opacity: 1.0;
+        }
+        100% {
+          -webkit-transform: scale(1.2, 1.2);
+          opacity: 0.0;
+        }
+      }
+    }
+
+    .line::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      min-height: calc(100% - 45px);
+      border-left: 1px solid $light-grey;
+      left: -27px;
+      top: 37px;
+    }
+
+    .last {
+      padding-bottom: 0;
+    }
+
+    .last::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      min-height: calc(100% - 80px);
+      border-left: 1px solid $light-grey;
+      left: -27px;
+      top: 37px;
+    }
+  }
+
+  .experience-title {
+    text-align: end;
+    padding-right: 10%;
+    font-size: 60px;
+    margin-top: 60px;
+    font-weight: 600;
+    color: white;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: $mobile-display) {
+      text-align: center;
+    }
+
+    @media (max-width: $mobile-display) {
+      font-size: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (max-width: $smallest-display) {
+      font-size: 30px;
+    }
+  }
+}
+
+
+

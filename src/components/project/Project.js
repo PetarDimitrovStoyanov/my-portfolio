@@ -1,35 +1,64 @@
-import React, {useState} from "react";
+import React, {useEffect} from "react";
 import './Project.scss';
 import link from "../../assets/icons/up-right-from-square-solid.svg";
-import info from "../../assets/icons/info-solid.svg";
-import Modal from "../modal/Modal";
+import {useTranslation} from "react-i18next";
+import {useNavigate} from "react-router-dom";
 
 export default function Project(props) {
+    const {i18n} = useTranslation('home');
+    const navigate = useNavigate();
+    const {t} = useTranslation();
 
-    const [isOpen, setIsOpen] = useState(false);
+    useEffect(() => {
+        Array.from(document.querySelectorAll('.open-project'))
+            .filter((element, index) => index % 2 !== 0)
+            .forEach(button => {
+                button.classList.add('align-left');
+            })
+    }, [])
 
-    const toggleModal = () => {
-        setIsOpen(!isOpen);
-    };
+    function getProjectTranslation(project) {
+        let translations = [...project.translations];
+        return translations.filter(translation => translation.language === i18n.language)[0];
+    }
+
+    function openProject(projectId) {
+        navigate(`/projects/${projectId}`)
+    }
+
+    function visitProject(url) {
+        window.open(url, '_blank');
+    }
 
     return (
-        <article className="project">
-            <img src={require(`../../assets/projects/${props.imgFileName}`)} alt="portfolio" className="project-img"/>
-            <div className="layer">
-                <h3 className="project-title">{props.title}</h3>
-                <p className="project-about">{props.about}</p>
-                <div className="button-container">
-                    {props.url.trim() !== '' ?
-                        <a href={props.url} className="project-reference" target="_blank">
-                            <img src={link} alt="link" className="link-icon"/>
-                        </a> :
-                        ''}
-                    <div className="read-more">
-                        <img src={info} alt="i" className="info" onClick={toggleModal}/>
+        <article className="project-wrapper">
+            <div className="left">
+                <div className="content">
+                    <h2 className="title-project">{props.project.title}</h2>
+                    <p>{getProjectTranslation(props.project).about}</p>
+                </div>
+                <button className="open-project" onClick={() => openProject(props.project.id)}>
+                    {t('projects.read-more')}
+                </button>
+            </div>
+            <div className="project right" onClick={() => visitProject(props.project.url)}>
+                <img
+                    src={require(`../../assets/projects/${props.project.imageName}`)}
+                    alt="portfolio"
+                    className="project-img"
+                />
+                <div className="layer">
+                    <h3 className="project-visit">{t('projects.visit')}</h3>
+                    <div className="button-container">
+                        {props.project.url.trim() !== '' ?
+                            <a href="" className="project-reference" target="_blank">
+                                <img src={link} alt="link" className="link-icon"/>
+                            </a>
+                            : ''
+                        }
                     </div>
                 </div>
             </div>
-            {isOpen ? <Modal toggleModal={toggleModal} projectId={props.id}/> : ''}
         </article>
     );
 }

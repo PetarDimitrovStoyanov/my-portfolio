@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@500&family=Six+Caps&display=swap');
+
+@import '../../../variables';
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../../assets/final-serious.jpg");
+  background-size: 800px;
+  background-position: right;
+  background-repeat: no-repeat;
+  margin-top: -60px;
+
+  @media (max-width: $small-display) {
+    background-image: url("../../../assets/final-serious - mobile.jpg");
+    background-size: $middle-mobile-display;
+  }
+
+  .container {
+    padding: 60px 10% 0 10%;
+    height: 100%;
+
+    @media (max-width: $small-display) {
+      height: 100%;
+      padding: 10px 4%;
+    }
+
+    .header-text {
+      margin-top: 25%;
+      font-size: 30px;
+
+      @media (max-width: $small-display) {
+        margin-top: 65vh;
+        font-size: 18px;
+      }
+
+      h1 {
+        font-size: 60px;
+
+        @media (max-width: $small-display) {
+          font-size: 30px;
+        }
+      }
+
+      .special {
+        color: $red-color;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        .special {
+          color: $red-color;
+        }
+
+        .small {
+          margin-right: -5px;
+        }
+
+        .big {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}

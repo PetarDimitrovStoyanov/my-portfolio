@@ -1,0 +1,53 @@
+@import '../../variables';
+
+.not-found-container {
+  padding: 0 10% 0 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 25%;
+  justify-content: space-between;
+  align-items: center;
+
+  .message {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .status-code {
+      font-size: 140px;
+      font-weight: 700;
+      color: $red-color;
+      width: 100%;
+      text-align: center;
+    }
+
+    .text {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 5%;
+    }
+  }
+
+  .button {
+    background: transparent;
+    border: 1px solid $red-color;
+    padding: 15px 20px;
+    color: $white-color;
+    cursor: pointer;
+    border-radius: 5px;
+
+    @media (max-width: $mobile-display) {
+      font-size: 18px;
+    }
+  }
+
+  .button:hover {
+    background: $red-color;
+  }
+
+
+}
+
+

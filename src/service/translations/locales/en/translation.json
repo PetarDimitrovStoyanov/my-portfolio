@@ -1,13 +1,14 @@
 {
   "header": {
     "about": "About Me",
-    "my-certificates": "My Certificates",
+    "my-certificates": "Certificates",
     "recent-projects": "Recent Projects",
-    "contact": "Contact",
+    "contact": "Contacts",
     "hello": "Hello, ",
     "i-am": "I'm ",
     "petar": "Petar ",
-    "stoyanov": "Stoyanov"
+    "stoyanov": "Stoyanov",
+    "experience": "Experience"
   },
   "about-me": {
     "description1": "I am passionate about coding and like to find solutions to complex problems. With approx of 2 years of experience in the field, I have developed a skillset in frontend and backend code development, and I am always eager to learn and take on new challenges.",
@@ -51,34 +52,6 @@
     }
   },
   "quote": "HARD WORK BEATS TALENT WHEN TALENT DOESN’T WORK HARD.",
-  "projects": {
-    "project1": {
-      "title": "This portfolio",
-      "about": "It represents me as a person and professional developer.",
-      "modal": {
-        "technologies": "React, JavaScript, axios, SCSS, react-toastify, swiper, react-i18next, google analytics & formsubmit",
-        "details": "The application was created to introduce some basic techniques in React & CSS, as well as to demonstrate the integration of external libraries.",
-        "contribution": "This app was made 100% by me and has the following functionalities:\n•\tDownloading of CV\n•\tChecking of my recent projects\n•\tSending emails\n•\tPreviewing of my: tech skills, soft skills, education and experience\n•\tPreviewing of my certificates",
-        "github": "https://github.com/PetarDimitrovStoyanov/my-portfolio",
-        "url": "https://petar-stoyanov-portfolio.vercel.app/"
-      }
-    },
-    "project2": {
-      "title": "DRC Akkodis",
-      "about": "Web app for internal company use only that contains list of projects",
-      "modal": {
-        "technologies": "Java (v.11) with Spring, VueJS 2, AWS, Docker, BitBucket, Jira, Figma and etc.",
-        "details": "This application is intended to be used only by employees throughout the Modis/Akkodis global sales department. It is a platform where employees from all over the world can enter, search and view the won and completed projects, as well as check the specifics related to each project. For example: how many and what teams worked on it, how much time and money it cost, what technologies were used, what results were achieved, and etc.",
-        "contribution": "This project was a team work. But my personal contribution is:\n•\tCreating and maintaining of web pages and components by given template design in Figma on VueJS 2 using JavaScript, HTML, CSS and SASS.\n•\tIntegrating of external libraries such as: “vue-router”, “i18n” for translations, “vue-msal” for sign-in from active directories,\"particles”, “axios”, “animate.css”, and others.\n•\t\thave personally created approx.75% of the front-end on the app which I’m working on with the team.\n•\tCreating new REST endopoints on the back-end using Java, Spring Framework, Spring Data JPA, Hibernate, and MySQL.\n•\tImplementing and extending of the project business logic using Domain Driven Design and Hexagonal Architecture such as login, search, CRUD and etc.\n•\tContribution to the integration of external dependencies as: AWS S3, AWS translation, generating of PDF, PPT, and DOCX documents\n•\tI have personally refactored 65% of the back-end and the database (with liquidbase) in order to improve/optimize the performance.\n•\tPart of the projects that implements Agile methodologies and Scrum practices\n",
-        "github": "",
-        "url": "https://drc-akkodis.com/"
-      }
-    },
-    "project3": {
-      "title": "Storage system",
-      "about": "Desktop application for issuing of payment notes."
-    }
-  },
   "submit-form": {
     "errors": {
       "name-required": "Name is required",
@@ -109,5 +82,68 @@
     "contribution": "Personal contribution: ",
     "details": "Further information: ",
     "close": "Close"
+  },
+  "projects": {
+    "visit": "Visit the application",
+    "read-more": "Read more"
+  },
+  "search": {
+    "backend": "Backend tools/technologies",
+    "frontend": "Frontend tools/technologies",
+    "other": "Other tools/technologies",
+    "infrastructures": "Infrastructures",
+    "placeholder-option": "Select or write",
+    "type": "Type the project name",
+    "search": "Search",
+    "no-projects": "There are no projects that match your criteria."
+  },
+  "experience": {
+    "enko": {
+      "name": "ENKO Plastics Ltd.",
+      "date": "2014 FEB - 2016 JAN",
+      "position":"Sales Representative - Bulgarian Market",
+      "description": "Consulting and negotiating with clients, organizing transport in Bulgaria, tracking payments, issuing the necessary documents, participating and organizing exhibitions."
+    },
+    "enko-2": {
+      "name": "ENKO Plastics Ltd.",
+      "date": "2016 JAN - 2021 NOV",
+      "promoted": "Promoted",
+      "position":"to Sales Representative - Global Market",
+      "description": "Conducting all imports and exports, issuing appropriate documents, managing transport schedules, negotiating with client and suppliers."
+    },
+    "softuni": {
+      "name": "SoftUni",
+      "date": "2021 SEP - PRESENT",
+      "position":"Evaluator of Student Web Application Projects",
+      "description": "This is a hourly second job, on a civil contract. \nThe work consists to being part of on examination committee that evaluates how a student has managed to create and implement a web application, based on a pre-set criteria."
+    },
+    "akkodis": {
+      "name": "Akkodis Bulgaria Ltd.",
+      "date": "2021 NOV - 2022 DEC",
+      "position": "Junior Backend Developer",
+      "description": "Frontend: Creating and editing of small components and bug fixes.\nBackend: Creating a custom API to start and run integration tests, as well as creating new REST endpoints and bugs fixing. Implementing new features and code cleanup."
+    },
+    "akkodis1": {
+      "name": "Akkodis Bulgaria Ltd.",
+      "date": "2022 DEC - PRESENT",
+      "promoted": "Promoted",
+      "position": "to Junior Full-Stack Developer",
+      "description": "Frontend: Code refactoring and creating completely new pages and components from scratch. Optimizing performance, integrating external libraries, and implementing new features.\nBackend: Code refactoring, implementing new features, creating new REST endpoints, optimizing performance, and helping of teammates to integrate external dependencies."
+    }
+  },
+  "project-page": {
+    "copy": "Copy project link",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools & Technologies",
+    "other": "Other",
+    "infrastructure": "Infrastructure",
+    "dependencies": "Dependencies",
+    "further": "Further Information",
+    "contribution": "My Contribution",
+    "visit": "Visit app",
+    "b-git": "Backend Git repository",
+    "f-git": "Frontend Git repository",
+    "private": "This is a PRIVATE project. You will not have full access to it, its data, or its information."
   }
 }

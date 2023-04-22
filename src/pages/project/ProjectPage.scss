@@ -1,0 +1,212 @@
+@import '../../variables';
+
+.project-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+
+  @media (max-width: $mobile-display) {
+    gap: 25px;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    padding-top: 10px;
+
+    .image {
+      width: 100%;
+      object-fit: cover;
+      opacity: 0.9;
+      height: 600px;
+    }
+
+    .title-container {
+
+      .title {
+        width: 100%;
+        padding: 20px;
+        font-size: 50px;
+        z-index: 1;
+
+        @media (max-width: $mobile-display) {
+          font-size: 40px
+        }
+      }
+
+      .references {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 5%;
+        width: 100%;
+        justify-content: center;
+
+        a {
+          color: $red-color;
+        }
+
+        @media (max-width: $mobile-display) {
+          font-size: 18px;
+          padding: 15px;
+        }
+      }
+    }
+
+  }
+
+  .grid-container {
+    padding-right: 10%;
+    padding-left: 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 80px;
+    height: fit-content;
+    width: 100%;
+    margin-bottom: -90px;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: $mobile-display) {
+      gap: 40px;
+      padding-left: 4%;
+      padding-right: 4%;
+    }
+
+    .header-project {
+      grid-column: 1 / span 3;
+      height: fit-content;
+
+      .about-text {
+        color: $light-grey;
+        text-align: center;
+        width: 100%;
+
+        .private {
+          color: $red-color;
+        }
+
+        @media (max-width: $mobile-display) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .content-project {
+      grid-column: 1 / span 2;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+
+      @media (max-width: $small-display) {
+        grid-column: 1 / span 3;
+      }
+
+      .info, .contribution {
+        h5 {
+          font-size: 35px;
+
+          @media (max-width: $mobile-display) {
+            font-size: 30px;
+            word-break: break-word;
+          }
+        }
+
+        p {
+          color: $light-grey;
+          white-space: pre-line;
+
+          @media (max-width: $mobile-display) {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .project-aside {
+      grid-column: 3 / 3;
+      grid-row: 2 / span 3;
+
+      @media (max-width: $small-display) {
+        grid-column: 1 / span 3;
+        grid-row: unset;
+      }
+
+      .project-aside-wrapper {
+        position: sticky;
+        top: 0;
+        height: fit-content;
+        border: 1px solid $light-grey;
+        padding: 10px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        @media (max-width: $mobile-display) {
+          gap: 10px;
+        }
+
+        .attribute {
+          color: $light-grey;
+          margin-bottom: 20px;
+
+          @media (max-width: $mobile-display) {
+            font-size: 18px;
+            word-break: break-word;
+          }
+        }
+
+        .attribute-title-h6 {
+          font-size: 18px;
+
+          @media (max-width: $mobile-display) {
+            font-size: 20px;
+            word-break: break-word;
+          }
+        }
+
+        .attribute-title-h5 {
+          margin-right: 10px;
+          line-height: 1.2;
+
+          @media (max-width: $mobile-display) {
+            font-size: 18px;
+            word-break: break-word;
+          }
+        }
+      }
+    }
+
+    .footer-aside {
+      grid-column: 1 / span 2;
+
+      @media (max-width: $small-display) {
+        grid-column: 1 / span 3;
+      }
+
+      .copy {
+        border: 1px solid $red-color;
+        background: transparent;
+        border-radius: 5px;
+        color: $white-color;
+        padding: 10px 15px;
+        cursor: pointer;
+
+        @media (max-width: $mobile-display) {
+          font-size: 18px;
+          width: 100%;
+        }
+      }
+
+      .copy:hover {
+        background: $red-color;
+      }
+    }
+  }
+}
