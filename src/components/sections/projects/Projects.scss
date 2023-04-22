@@ -1,0 +1,49 @@
+@import '../../../variables';
+
+.projects {
+  padding: 50px 10%;
+  color: $light-grey;
+
+  @media (max-width: $small-display) {
+    padding: 0 4% 50px;
+  }
+
+  .container {
+    .sub-title {
+      font-size: 60px;
+      font-weight: 600;
+      color: $white-color;
+
+      @media (max-width: $small-display) {
+        font-size: 50px;
+      }
+
+      @media (max-width: $mobile-display) {
+        text-align: center;
+      }
+
+      @media (max-width: $smallest-display) {
+        font-size: 30px;
+      }
+    }
+
+    .project-list{
+      display: flex;
+      flex-direction: column;
+      gap: 120px;
+      margin-top: 60px;
+
+      @media (max-width: $small-display) {
+        gap: 80px;
+      }
+
+      @media (max-width: $mobile-display) {
+        gap: 60px;
+      }
+
+      .no-match {
+        color: $red-color;
+      }
+    }
+  }
+}

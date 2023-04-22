@@ -1,0 +1,44 @@
+@import '../../../variables';
+
+.footer {
+  margin-top: 200px;
+  height: fit-content;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+
+  .copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: $grey-color;
+    font-weight: 300;
+
+    @media (max-width: $small-display) {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+  }
+
+  .copyright::before {
+    content: '';
+    position: absolute;
+    bottom: 74px;
+    left: 0;
+    height: 200px;
+    width: 100%;
+    background-image: url('../../../assets/footer4-background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media (max-width: $mobile-display) {
+      height: 130px;
+    }
+
+    @media (max-width: $smallest-display) {
+      bottom: 95px;
+    }
+  }
+}

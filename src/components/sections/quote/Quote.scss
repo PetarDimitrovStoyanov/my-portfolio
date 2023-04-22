@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@500&family=Six+Caps&display=swap');
+@import '../../../variables';
+
+.quote {
+  margin-top: 40px;
+  position: relative;
+
+  .text {
+    width: 100%;
+    text-align: center;
+    padding: 170px 15px;
+    background-image: url('../../../assets/quote-background.svg');
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-position: center;
+    font-weight: 300;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 70px;
+
+    @media (max-width: $small-display) {
+      word-break: break-word;
+      font-size: 25px;
+      padding: 70px 0;
+    }
+
+    @media (max-width: $mobile-display) {
+      padding: 50px 5px
+    }
+  }
+
+  .bulgarian {
+    font-size: 42px;
+
+    @media (max-width: $small-display) {
+      font-size: 25px;
+    }
+  }
+}
+

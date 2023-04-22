@@ -1,101 +1,186 @@
 @import '../../variables';
 
-.project {
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
+.project-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  justify-content: space-between;
+  min-height: 300px;
 
-  @media (max-width: $small-display) {
-    min-height: 300px;
-  }
-
-  .layer {
+  .project {
     width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), $red-color);
     border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    position: relative;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    font-size: 14px;
-    color: $white-color;
-    transition: height 0.5s;
 
-    .project-title {
-      font-weight: 500;
-      margin-bottom: 20px;
+    @media (max-width: $small-display) {
+      min-height: 300px;
     }
-    .button-container {
+
+    .layer {
+      width: 100%;
+      height: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), $red-color);
+      border-radius: 10px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      overflow: hidden;
       display: flex;
-      flex-direction: row;
+      align-items: center;
       justify-content: center;
-      gap: 40px;
+      flex-direction: column;
+      padding: 0 40px;
+      text-align: center;
+      font-size: 14px;
+      color: $white-color;
+      transition: height 0.5s;
 
-      .project-reference {
-        margin-top: 20px;
-        color: $red-color;
-        text-decoration: none;
-        font-size: 18px;
-        line-height: 60px;
-        background: $white-color;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        text-align: center;
-        cursor: pointer;
+      .project-visit {
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
 
-        .link-icon {
-          position: relative;
-          left: 1px;
-          top: 5px;
-          height: 22px;
-          width: 22px;
-          border-radius: 0;
-          filter: brightness(0) saturate(100%) invert(15%) sepia(82%) saturate(6960%) hue-rotate(336deg) brightness(99%) contrast(107%);
+      .button-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+
+        .project-reference {
+          margin-top: 20px;
+          color: $red-color;
+          text-decoration: none;
+          font-size: 18px;
+          line-height: 60px;
+          background: $white-color;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          text-align: center;
+          cursor: pointer;
+
+          .link-icon {
+            position: relative;
+            left: 1px;
+            top: 5px;
+            height: 22px;
+            width: 22px;
+            border-radius: 0;
+            filter: brightness(0) saturate(100%) invert(15%) sepia(82%) saturate(6960%) hue-rotate(336deg) brightness(99%) contrast(107%);
+          }
+        }
+
+        .read-more {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          cursor: pointer;
+          margin-top: 20px;
+          background-color: $white-color;
+
+          .info {
+            width: 26px;
+            height: 26px;
+            left: 1px;
+            top: 16px;
+            position: relative;
+          }
         }
       }
 
-      .read-more {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        cursor: pointer;
-        margin-top: 20px;
-        background-color: $white-color;
+    }
 
-        .info {
-          width: 26px;
-          height: 26px;
-          left: 1px;
-          top: 16px;
-          position: relative;
+    .project-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+      transition: transform 0.5s;
+      cursor: pointer;
+
+      @media (max-width: $small-display) {
+        min-height: 300px;
+      }
+    }
+  }
+
+  .project:hover img {
+    transform: scale(1.1);
+  }
+
+  .project:hover .layer {
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .left {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .content {
+
+      h2 {
+        color: $white-color;
+      }
+
+      p {
+        @media (max-width: $mobile-display) {
+          font-size: 18px;
+          line-height: 1.4;
         }
       }
     }
 
+    .open-project {
+      border: 1px solid $red-color;
+      color: $white-color;
+      padding: 15px 20px;
+      background-color: transparent;
+      cursor: pointer;
+      border-radius: 4px;
+      align-self: end;
+      margin-top: 15px;
+
+      @media (max-width: $mobile-display) {
+        width: 100%;
+        margin: 15px auto;
+        font-size: 16px;
+      }
+
+      @media (max-width: $mobile-display) {
+        font-size: 18px;
+        line-height: 1.4;
+      }
+    }
+
+    .align-left {
+      align-self: start;
+    }
+
+    .open-project:hover {
+      background-color: $red-color;
+      color: $white-color;
+    }
   }
 
-  .project-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    display: block;
-    transition: transform 0.5s;
+  .right {
+    flex-basis: 60%;
   }
 }
 
-.project:hover img {
-  transform: scale(1.1);
+.project-wrapper:nth-child(odd) {
+  flex-direction: row-reverse;
 }
 
-.project:hover .layer {
-  height: 100%;
+.project-wrapper {
+  @media (max-width: $mobile-display) {
+    gap: 5px;
+    flex-direction: column !important;
+  }
 }

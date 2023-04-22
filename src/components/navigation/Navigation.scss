@@ -1,0 +1,93 @@
+@import '../../variables';
+
+.container-nav {
+  padding: 0 10%;
+  width: 100%;
+
+  @media (max-width: $small-display) {
+    padding: 0 4%;
+  }
+
+  .navigation {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .logo {
+      cursor: pointer;
+
+      .portfolio {
+        font-family: 'Six Caps', sans-serif;
+        font-size: 72px;
+        margin-bottom: -15px;
+        transition: color 0.8s ease;
+      }
+
+      .portfolio:hover {
+        color: $red-color;
+      }
+
+      .name {
+        font-size: 18px;
+        color: $red-color;
+        transition: color 0.8s ease;
+      }
+    }
+    .ul-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (max-width: $burger-menu-display) {
+        display: none;
+      }
+
+      .list-item {
+        display: inline-block;
+        list-style: none;
+        margin: 10px 15px;
+        position: relative;
+
+        .nav-link {
+          color: $white-color;
+          text-decoration: none;
+          font-size: 18px;
+        }
+
+        .nav-link::after {
+          content: '';
+          width: 0;
+          height: 3px;
+          background: $red-color;
+          position: absolute;
+          left: 0;
+          bottom: -6px;
+          transition: 0.5s;
+        }
+
+        .nav-link:hover::after {
+          width: 100%;
+        }
+
+        .cv {
+          cursor: pointer;
+        }
+      }
+
+      .languages {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+        width: 60px;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
