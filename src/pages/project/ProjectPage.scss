@@ -6,6 +6,12 @@
   gap: 40px;
   width: 100%;
 
+  @media (min-width: 2500px) {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 2500px;
+  }
+
   @media (max-width: $mobile-display) {
     gap: 25px;
   }
