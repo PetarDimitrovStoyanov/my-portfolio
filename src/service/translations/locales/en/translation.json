@@ -144,6 +144,7 @@
     "visit": "Visit app",
     "b-git": "Backend Git repository",
     "f-git": "Frontend Git repository",
-    "private": "This is a PRIVATE project. You will not have full access to it, its data, or its information."
+    "private": "This is a PRIVATE project. You will not have full access to it, its data, or its information.",
+    "success-copy": "The project link was copied successfully."
   }
 }

@@ -41,7 +41,7 @@ export default function ProjectPage() {
         element.select();
         document.execCommand('copy');
         document.body.removeChild(element);
-        SUBMIT_SERVICE.showSuccessNotification("The url was copied successfully.");
+        SUBMIT_SERVICE.showSuccessNotification(t('project-page.success-copy'));
     }
 
 
@@ -67,7 +67,9 @@ export default function ProjectPage() {
             <div className="grid-container">
                 <header className="header-project">
                     <p className="about-text">
-                        {getTranslation().about} <br/> {project.private ? <span className="private">{t('project-page.private')}</span> : ''}
+                        {getTranslation().about}
+                        <br/>
+                        {project.private ? <span className="private">{t('project-page.private')}</span> : ''}
                     </p>
                 </header>
                 <div className="content-project">

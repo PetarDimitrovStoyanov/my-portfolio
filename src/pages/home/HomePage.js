@@ -6,10 +6,11 @@ import About from "../../components/sections/about/About";
 import Contact from "../../components/sections/contact/Contact";
 import Header from "../../components/sections/header/Header";
 import Experience from "../../components/sections/experience/Experience";
+import './HomePage.scss';
 
 export default function HomePage() {
     return (
-        <>
+        <div className="pages">
             <Header/>
             <Projects/>
             <Quote/>
@@ -17,6 +18,6 @@ export default function HomePage() {
             <Experience />
             <About/>
             <Contact/>
-        </>
+        </div>
     );
 }
