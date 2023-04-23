@@ -2,6 +2,12 @@
 
 .form {
   width: 100%;
+  position: relative;
+  z-index: 1;
+
+  @media only screen and (min-width: 2550px) {
+    margin-bottom: 100px;
+  }
 
   input, textarea {
     border: 0;
@@ -50,6 +56,7 @@
         padding: 15px 20px;
         width: 100%;
         max-width: 400px;
+        margin-bottom: 5px;
       }
     }
 
