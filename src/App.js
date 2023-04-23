@@ -23,8 +23,8 @@ function App() {
                     <Route path="/projects/:id" element={<ProjectPage/>}/>
                     <Route path="*" element={<NotFound />}/>
                 </Routes>
-                <Footer/>
                 <ToastContainer/>
+                <Footer/>
                 <ScrollToTopButton/>
             </div>
         </I18nextProvider>

@@ -146,5 +146,9 @@
     "f-git": "Frontend Git repository",
     "private": "This is a PRIVATE project. You will not have full access to it, its data, or its information.",
     "success-copy": "The project link was copied successfully."
+  },
+  "not-found": {
+    "message": "Sorry, the page you tried to reach is not found.",
+    "back": "Back to the home page"
   }
 }

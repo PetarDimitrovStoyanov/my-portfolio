@@ -7,6 +7,14 @@
   position: relative;
   bottom: 0;
 
+  @media (min-width: 2500px) {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 2500px;
+    align-self: center;
+    margin-top: 0;
+  }
+
   .copyright {
     width: 100%;
     text-align: center;
@@ -40,5 +48,28 @@
     @media (max-width: $smallest-display) {
       bottom: 95px;
     }
+
+    @media (min-resolution: 220dpi) and (max-height:400px) {
+      display: none;
+    }
+  }
+}
+
+.not-found-page {
+  position: fixed;
+  bottom: 0;
+
+  @media (min-resolution: 160dpi) and (max-height:500px)  {
+    display: none;
+  }
+
+  .copyright::before {
+    @media (min-resolution: 140dpi) and (max-height:800px) {
+      display: none;
+    }
+  }
+
+  @media (min-resolution: 220dpi) and (max-height:400px) {
+    display: none;
   }
 }
