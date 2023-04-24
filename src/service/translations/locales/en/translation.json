@@ -11,10 +11,7 @@
     "experience": "Experience"
   },
   "about-me": {
-    "description1": "I am passionate about coding and like to find solutions to complex problems. With approx of 2 years of experience in the field, I have developed a skillset in frontend and backend code development, and I am always eager to learn and take on new challenges.",
-    "description2": "My approach to development is analytical, and I believe that this is essential for success. I am dedicated to delivering high-quality work (on time) that meets the requirements while pushing the boundaries of what I can and know.",
-    "description3": "In my free time, I like to spend time learning new things and experimenting, which helps to keep me inspired and motivated.",
-    "description4": "If you are looking for a person who has \"fire\" for doing things, do not leave when it is hard, always give his best, and always strive to improve, I would love to hear from you.",
+    "description": "I am passionate about coding and enjoy creating solutions to complex problems. With almost 2 years of experience in the field professionally, I have developed a skillset in frontend and backend code development, and I am always eager to learn and take on new challenges.\nMy approach to development is analytical, and I believe that this is essential for success. I am dedicated to delivering high-quality work within a set timeline while simultaneously expanding my capabilities.\nIn my free time, I learn new things and experiment, which keeps me inspired and motivated. 'A rolling stone gathers no moss' they say, and I do my best to keep rolling. If you are looking for a person who has a flair for coding, who is persistent in always giving his best, and always striving to improve, I would love to hear from you.",
     "tech-skills": "Technical skills",
     "soft-skills": "Soft skills",
     "experience": "Experience",
@@ -37,7 +34,7 @@
       "persist":"Persistent"
     },
     "experience1": {
-      "multiple-addition": "Working on multiple projects including full-time and side clients (2+ years)",
+      "multiple-addition": "Working on multiple jobs simultaneously including full-time and side projects for clients (2+ years)",
       "projects": "Experimental and Educational projects (4+ years)",
       "assessment": "Projects assessment of students (1.5+ years) in SoftUni",
       "assessment2": "as part of the evaluator committee"
