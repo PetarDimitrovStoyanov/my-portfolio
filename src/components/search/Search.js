@@ -26,6 +26,10 @@ export default function Search(props) {
         setCollectionInfrastructure(projects, 'infrastructures', infrastructureOptions);
     }, [infrastructureOptions, frontEndOptions, backEndOptions, otherOptions]);
 
+    useEffect(() => {
+        doSearch();
+    }, [selectedFrontEndOptions, selectedBackEndOptions, selectedOtherOptions, selectedInfrastructureOptions])
+
     function handleSelectBackEnd(data) {
         setSelectedBackEndOptions(data);
     }

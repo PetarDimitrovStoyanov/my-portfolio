@@ -25,14 +25,7 @@ export default function About() {
                         <div className="about-col-1 small img-container-layer">
                             <img src={require('../../../assets/official-hd.png')} alt="user"/>
                         </div>
-                        <p>{t('about-me.description1')}
-                            <br/>
-                            {t('about-me.description2')}
-                            <br/>
-                            {t('about-me.description3')}
-                            <br/>
-                            {t('about-me.description4')}
-                        </p>
+                        <p className='description-about'>{t('about-me.description')}</p>
                         <div className="tab-titles">
                             <p className="tab-links active-link skills" onClick={ () => open('skills')}>{t('about-me.tech-skills')}</p>
                             <p className="tab-links soft-skills" onClick={ () => open('soft-skills')}>{t('about-me.soft-skills')}</p>
