@@ -86,46 +86,73 @@ export default function ProjectPage() {
                     <div className="project-aside-wrapper">
                         <div className="tools">
                             <h5 className="attribute-title-h6">{t('project-page.tools')}</h5>
-                            <div className="frontend">
-                                <span className="attribute-title-h5">{t('project-page.frontend')}:</span>
-                                <span className="attribute">
+                            {project['technologies-and-tools']['frontend'].map(item => item.name).join(', ').trim() !== ''
+                                ?
+                                <div className="frontend">
+                                    <span className="attribute-title-h5">{t('project-page.frontend')}:</span>
+                                    <span className="attribute">
                                     {project['technologies-and-tools']['frontend'].map(item => item.name).join(', ')}
                                 </span>
-                            </div>
-                            <div className="backend">
-                                <span className="attribute-title-h5">{t('project-page.backend')}:</span>
-                                <span className="attribute">
+                                </div>
+                                : ''
+                            }
+                            {project['technologies-and-tools']['backend'].map(item => item.name).join(', ').trim() !== ""
+                                ?
+                                <div className="backend">
+                                    <span className="attribute-title-h5">{t('project-page.backend')}:</span>
+                                    <span className="attribute">
                                     {project['technologies-and-tools']['backend'].map(item => item.name).join(', ')}
                                 </span>
-                            </div>
-                            <div className="other">
-                                <span className="attribute-title-h5">{t('project-page.other')}:</span>
-                                <span className="attribute">
+                                </div>
+                                : ''
+                            }
+                            {project['technologies-and-tools']['other'].map(item => item.name).join(', ').trim() !== ''
+                                ?
+                                <div className="other">
+                                    <span className="attribute-title-h5">{t('project-page.other')}:</span>
+                                    <span className="attribute">
                                     {project['technologies-and-tools']['other'].map(item => item.name).join(', ')}
                                 </span>
+                                </div>
+                                : ''
+                            }
+                        </div>
+                        {project['infrastructures'].map(item => item.name).join(', ').trim() !== ''
+                            ?
+                            <div className="infrastructure">
+                                <h5 className="attribute-title-h6">{t('project-page.infrastructure')}:</h5>
+                                <ppan
+                                    className="attribute">{project['infrastructures'].map(item => item.name).join(', ')}</ppan>
                             </div>
-                        </div>
-                        <div className="infrastructure">
-                            <h5 className="attribute-title-h6">{t('project-page.infrastructure')}:</h5>
-                            <ppan
-                                className="attribute">{project['infrastructures'].map(item => item.name).join(', ')}</ppan>
-                        </div>
+                            : ''
+                        }
+
                         <div className="dependencies">
                             <h5 className="attribute-title-h6">{t('project-page.dependencies')}:</h5>
-                            <div className="frontend-dep">
-                                <span className="attribute-title-h5">{t('project-page.frontend')}:</span>
-                                <ppan className="attribute">
-                                    {project['technologies-and-tools']['frontend-dependencies']
-                                        .map(dependency => dependency.name).join(', ')}
-                                </ppan>
-                            </div>
-                            <div className="backend-dep">
-                                <span className="attribute-title-h5">{t('project-page.backend')}:</span>
-                                <ppan className="attribute">
-                                    {project['technologies-and-tools']['backend-dependencies']
-                                        .map(dependency => dependency.name).join(', ')}
-                                </ppan>
-                            </div>
+                            {project['technologies-and-tools']['frontend-dependencies']
+                                .map(dependency => dependency.name).join(', ').trim() !== ''
+                                ?
+                                <div className="frontend-dep">
+                                    <span className="attribute-title-h5">{t('project-page.frontend')}:</span>
+                                    <ppan className="attribute">
+                                        {project['technologies-and-tools']['frontend-dependencies']
+                                            .map(dependency => dependency.name).join(', ')}
+                                    </ppan>
+                                </div>
+                                : ''
+                            }
+                            {project['technologies-and-tools']['backend-dependencies']
+                                .map(dependency => dependency.name).join(', ').trim() !== ''
+                            ?
+                                <div className="backend-dep">
+                                    <span className="attribute-title-h5">{t('project-page.backend')}:</span>
+                                    <ppan className="attribute">
+                                        {project['technologies-and-tools']['backend-dependencies']
+                                            .map(dependency => dependency.name).join(', ')}
+                                    </ppan>
+                                </div>
+                                : ''
+                            }
                         </div>
                     </div>
                 </aside>
