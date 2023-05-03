@@ -45,8 +45,14 @@ export const projects = [
                     "name": "CSS"
                 },
                 {
+                    "name": "SASS"
+                },
+                {
+                    "name": "SCSS"
+                },
+                {
                     "name": "HTML"
-                }
+                },
             ],
             "backend-dependencies": [
                 {
@@ -81,6 +87,21 @@ export const projects = [
                 },
                 {
                     "name": "Hibernate"
+                },
+                {
+                    "name": "Spring Security"
+                },
+                {
+                    "name": "Liquibase"
+                },
+                {
+                    "name": "Spring JDBC"
+                },
+                {
+                    "name": "Spring Web"
+                },
+                {
+                    "name": "Spring Boot v.2"
                 }
             ],
             "backend": [
@@ -237,6 +258,122 @@ export const projects = [
                 "details": {
                     "more-info": "Апликацията е създадена за да представи някои основни техники в React & CSS, както и да демонстрира интегрирането на външни библиотеки.",
                     "contribution": "Тази апликация е направена 100% само от мен и има следните функционалности:\n•\tСваляне на CV\n•\tПроверка на скорошни проекти\n•\tИзпращане на имейли\n•\tПреглед на: умения, опит, сертификати и личностни умения\n•\tПреглед на моите сертификати"
+                }
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "My notes",
+        "url": "https://my-notes-app-frontend.vercel.app/login",
+        "backend-git-url": "https://github.com/PetarDimitrovStoyanov/my-notes-backend",
+        "frontend-git-url": "https://github.com/PetarDimitrovStoyanov/my-notes-app-frontend",
+        "imageName": "project3.PNG",
+        "private": false,
+        "technologies-and-tools": {
+            "frontend-dependencies": [
+                {
+                    "name": "axios"
+                },
+                {
+                    "name": "vuex"
+                },
+                {
+                    "name": "vuex-persistedstate"
+                },
+                {
+                    "name": "vuex-router"
+                },
+                {
+                    "name": "vuedraggable"
+                }
+            ],
+            "backend": [
+                {
+                    "name": "Java"
+                },
+                {
+                    "name": "Spring"
+                },
+                {
+                    "name": "MySQL"
+                },
+            ],
+            "backend-dependencies": [
+                {
+                    "name": "MapStruct"
+                },
+                {
+                    "name": "Spring Security"
+                },
+                {
+                    "name": "Lombok"
+                },
+                {
+                    "name": "Liquibase"
+                },
+                {
+                    "name": "Spring JDBC"
+                },
+                {
+                    "name": "Spring Web"
+                },
+                {
+                    "name": "Jsonwebtoken"
+                },
+                {
+                    "name": "Jakarta Validation Api"
+                },
+                {
+                    "name": "Spring Boot v.3"
+                }
+            ],
+            "frontend": [
+                {
+                    "name": "VueJS 3"
+                },
+                {
+                    "name": "JavaScript"
+                },
+                {
+                    "name": "SCSS"
+                },
+                {
+                    "name": "CSS"
+                },
+                {
+                    "name": "HTML"
+                }
+            ],
+            "other": [
+                {
+                    "name": "GitHub"
+                }
+            ]
+        },
+        "infrastructures": [
+            {
+                "name": "Vercel"
+            },
+            {
+                "name": "Railway"
+            }
+        ],
+        "translations": [
+            {
+                "language": "en",
+                "about": "It is a small application that allows users to create, read, update, delete, search, and filter their own notes.",
+                "details": {
+                    "more-info": "The web app allows users to reorder their notes in 3 categories: 'Personal', 'Job', and 'Other' using drag and drop, which gives better UI/UX and helps keep them ordered in the desired way. There is implemented a functionality that allows each user to mark a note as 'important' when the star icon is clicked. Each note can be edited - title and text content by clicking on the text.",
+                    "contribution": "The backend, frontend, database and deployments were made only by me. The frontend is deployed in 'Vercel' while the backend and database are in 'Railway'. The project aims to show integration of Spring Security, Spring JPA, JWT authentication, MapStruct, DTO validations in controllers and 'search' functionality with Criteria API. It also demonstrates how to integrate Vue-Draggable, axios interceptors, route-guards, persistence store with vuex (save state on page refresh), validations and error handling from the frontend side.\nIt is possible that the application does not work very fast due to the low technical characteristics of the servers on which the deployments are performed.\nIt is important to note that the backend has integrated liquibase dependency, through which a data is filled in the database when the database is created for a first time, through so-called migrations consisting of SQL queries. In addition, there is also a created stored procedure that makes connections between tables, through ID relations."
+                }
+            },
+            {
+                "language": "bg",
+                "about": "Това е малко приложение, което позволява на потребителите да създават, четат, актуализират, изтриват, търсят и филтрират свои собствени бележки.",
+                "details": {
+                    "more-info": "Уеб приложението позволява на потребителите да пренареждат своите бележки в 3 категории: „Лични“, „Работа“ и „Други“, като използват плъзгане и пускане, което дава по-добър UI/UX и помага да се подреждат по определен начин. Има създадена функционалност, която позволява на всеки потребител да маркира бележка като „важна“, когато се щракне върху иконата с формата на звезда. Всяка бележка може да се редактира - заглавие и текстово съдържание, като се щракне върху текста.",
+                    "contribution": "Бекендът, фронтендът, базата данни и deployment-тите са направени само от мен. Фронтендът е деплойнат във 'Vercel', докато бекендът и базата данни са в 'Railway'. Проектът има за цел да покаже как се интегрира Spring Security, Spring JPA, JWT аутентикация, MapStruct, как се прилагат DTO валидации в контролерите и 'search' функцианалността с Criteria API. Също така се демонстрира как се интегрира Vue-Draggable, axios интерсептори, route-guard-ове, persistence store с vuex (запазване на state-a при рефреш на страницата), валидации и error хендлинг от страна на фронтенда.\nВъзможно е приложението да не работи с бързи темпове поради ниските технически характеристики на сървърите на които са извъшени deployment-ите.\nВажно е да се отбележи, че бекенът е с интегрирано ликуибасе депендънси, чрез което се попълват данни в базата при първото създаване на базата данни, чрез така наречените миграции състоящи се от SQL заявки. Като допълнение има и създадена процедура, която прави връзки между таблици, чрез релации по ид-та."
                 }
             }
         ]
