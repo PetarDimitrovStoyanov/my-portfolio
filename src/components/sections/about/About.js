@@ -41,9 +41,10 @@ export default function About() {
                                 <li className="tab-content-items"><span>{t('about-me.skill1.working-database')}
                                     - MySQL {t('about-me.skill1.and')} MongoDB</span></li>
                                 <li className="tab-content-items"><span>Source control system - Git</span></li>
-                                <li className="tab-content-items"><span>Kubernetes ({t('about-me.skill1.beginner')}) and Docker</span></li>
-                                <li className="tab-content-items"><span>{t('about-me.skill1.microservice')} ({t('about-me.skill1.beginner')})</span></li>
-                                <li className="tab-content-items"><span>DevOps {t('about-me.skill1.with')} AWS ({t('about-me.skill1.beginner')})</span></li>
+                                <li className="tab-content-items"><span>Docker</span></li>
+                                {/*<li className="tab-content-items"><span>Kubernetes ({t('about-me.skill1.beginner')}) and Docker</span></li>*/}
+                                {/*<li className="tab-content-items"><span>{t('about-me.skill1.microservice')} ({t('about-me.skill1.beginner')})</span></li>*/}
+                                {/*<li className="tab-content-items"><span>DevOps {t('about-me.skill1.with')} AWS ({t('about-me.skill1.beginner')})</span></li>*/}
                             </ul>
                         </div>
                         <div className="tab-contents soft-skills">
