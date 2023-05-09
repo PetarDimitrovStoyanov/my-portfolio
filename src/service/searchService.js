@@ -6,6 +6,7 @@ export function setCollection(projects, type, subType, optionList) {
             }
         });
     });
+    sortOptions(optionList);
 }
 
 export function setCollectionInfrastructure(projects, type, optionList) {
@@ -16,6 +17,11 @@ export function setCollectionInfrastructure(projects, type, optionList) {
             }
         });
     });
+    sortOptions(optionList)
+}
+
+function sortOptions(optionList) {
+    optionList.sort((optionOne, optionTwo) => optionOne.value.localeCompare(optionTwo.value))
 }
 
 export const style= {
