@@ -26,8 +26,12 @@ export default function Project(props) {
         navigate(`/projects/${projectId}`)
     }
 
-    function visitProject(url) {
-        window.open(url, '_blank');
+    function visitProject(project) {
+        if (project.url) {
+            window.open(project.url, '_blank');
+        } else {
+            openProject(project.id)
+        }
     }
 
     return (
@@ -41,22 +45,29 @@ export default function Project(props) {
                     {t('projects.read-more')}
                 </button>
             </div>
-            <div className="project right" onClick={() => visitProject(props.project.url)}>
+            <div className="project right" onClick={() => visitProject(props.project)}>
                 <img
                     src={require(`../../assets/projects/${props.project.imageName}`)}
                     alt="portfolio"
                     className="project-img"
                 />
                 <div className="layer">
-                    <h3 className="project-visit">{t('projects.visit')}</h3>
-                    <div className="button-container">
-                        {props.project.url.trim() !== '' ?
-                            <a href="" className="project-reference" target="_blank">
-                                <img src={link} alt="link" className="link-icon"/>
-                            </a>
-                            : ''
-                        }
-                    </div>
+                    {
+                        props.project.url ?
+                            <>
+                                <h3 className="project-visit">{t('projects.visit')}</h3>
+                                <div className="button-container">
+                                    {props.project.url.trim() !== '' ?
+                                        <a href="" className="project-reference" target="_blank">
+                                            <img src={link} alt="link" className="link-icon"/>
+                                        </a>
+                                        : ''
+                                    }
+                                </div>
+                            </>
+                            :
+                            <h3 className="project-visit">{t('projects.read-more')}</h3>
+                    }
                 </div>
             </div>
         </article>

@@ -265,7 +265,7 @@ export const projects = [
     {
         "id": 3,
         "title": "My notes",
-        "url": "https://my-notes-app-frontend.vercel.app/login",
+        "url": null,
         "backend-git-url": "https://github.com/PetarDimitrovStoyanov/my-notes-backend",
         "frontend-git-url": "https://github.com/PetarDimitrovStoyanov/my-notes-app-frontend",
         "imageName": "project3.PNG",
